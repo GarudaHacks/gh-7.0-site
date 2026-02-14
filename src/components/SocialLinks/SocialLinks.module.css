@@ -1,0 +1,26 @@
+.links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--purple-mid);
+  transform: scale(1.12);
+}
+
+.link span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+}
