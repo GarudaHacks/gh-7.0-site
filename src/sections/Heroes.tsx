@@ -3,6 +3,7 @@
 import CornerCube from "@/components/Cornercube";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
+import { XMarkIcon } from "@heroicons/react/24/outline";
 
 export default function Heroes() {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -140,7 +141,7 @@ export default function Heroes() {
             aria-label="Close panel"
             className="absolute top-6 right-6 z-10 w-10 h-10 flex items-center justify-center rounded-full border border-[#C4A9FF]/40 text-[#C4A9FF] bg-transparent text-lg cursor-pointer transition-all duration-200 hover:bg-[#C4A9FF]/15 hover:rotate-90"
           >
-            ✕
+            <XMarkIcon className="w-5 h-5" />
           </button>
 
    
