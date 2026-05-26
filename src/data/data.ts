@@ -2,7 +2,12 @@ export const AboutData = [
   {
     title: "What is GarudaHacks?",
     description:
-      "We are a 501c3 nonprofit dedicated to empowering young Indonesians with the skills and motivation to solve the country's most urgent issues. Despite their skill and ideas, many talented programmers lack the resources to succeed in the job market as a result, we began our organization in 2020, launching our first hackathon online. Since then, we have hosted SEA's largest hackathons for five years consecutively and have helped thousands of students develop in both computer science and entrepreneurship",
+      "We are a 501c3 nonprofit dedicated to empowering young Indonesians with the skills and motivation to solve the country's most urgent issues.",
+  },
+  {
+    title: "Our Organization",
+    description:
+      "We began our organization in 2020, launching our first hackathon online. Since then, we have hosted SEA's largest hackathons for five years consecutively and have helped thousands of students develop in both computer science and entrepreneurship",
   },
 ];
 
@@ -44,6 +49,30 @@ export const contributors = [
   "hib4",
   "heryandjaruma",
   "hafidzmrizky",
+];
+
+export const speaker = [
+  {
+    id: 1,
+    name: "Sarah Fajri",
+    role: "Project Manager at Deloitte",
+    photo: "/image/sarah.png",
+    bio: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  },
+  {
+    id: 2,
+    name: "Budi Santoso",
+    role: "CTO at Gojek",
+    photo: "/image/sarah.png",
+    bio: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  },
+  {
+    id: 3,
+    name: "Rina Putri",
+    role: "AI Researcher at Google",
+    photo: "/image/sarah.png",
+    bio: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  },
 ];
 
 export const projects = [
@@ -96,5 +125,29 @@ export const projects = [
       "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/950/385/datas/original.png",
     link: "https://devpost.com/software/iris-fprvg9?_gl=1*1cfsuv2*_gcl_au*MTY0MTk2NDAyMi4xNzQyNDQ3NTU2*_ga*MTQzNzAyNDA1LjE3NDI0NDc1NTY.*_ga_0YHJK3Y10M*MTc0NDM1NTg0Ni4yLjEuMTc0NDM1NTg1MC4wLjAuMA..",
     teamName: "team name",
+  },
+];
+
+export const categorys = [
+  {
+    label: "Track 1",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    learnMore: "#",
+    image: "#",
+  },
+  {
+    label: "Track 2",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    learnMore: "#",
+    image: "#",
+  },
+  {
+    label: "Track 3",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    learnMore: "#",
+    image: "#",
   },
 ];
