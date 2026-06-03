@@ -5,6 +5,7 @@ import Link from "next/link";
 import { categorys } from "@/data/data";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import CornerCube from "@/components/Cornercube";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface Category {
   label: string;
@@ -30,10 +31,16 @@ export default function Overview({
   categories = defaultCategories,
   defaultImageSrc,
 }: OverviewProps) {
+ 
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const active = categories[activeIndex];
-  const others = categories.filter((_, i) => i !== activeIndex);
+  
+  const handleCategoryChange = (idx: number) => {
+    setActiveIndex(idx);
+    setIsExpanded(false); 
+  };
 
   const points = [
     // dott atas
@@ -53,70 +60,106 @@ export default function Overview({
     { pos: "right-[7px] -bottom-[10px] lg:right-[111px] lg:-bottom-[10px] xl:right-[153px] xl:-bottom-[10px]" },
   ];
 
+  const activeImage =
+    active.imageSrc ??
+    categorys.find((c) => c.label === active.label)?.image ??
+    defaultImageSrc;
+
   return (
-    <section className="w-full relative border-b border-[#C4A9FF]">
+    <section className={`w-full relative border-b border-[#C4A9FF] ${className}`}>
       <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-[#C4A9FF]">
         {points.map((point, i) => (
           <CornerCube key={i} className={`${point.pos} pointer-events-none`} />
         ))}
-        <div className="flex flex-col md:flex-row items-start gap-8 md:gap-12 border-r border-l border-[#C4A9FF] px-4 md:px-12 py-16 md:py-[120px]">
-          <div className="flex flex-col gap-5 md:justify-between flex-1 h-full w-full min-h-[400px]">
-            <div className="flex flex-col gap-3">
-              <h2 className=" font-semibold text-gray-800 tracking-tight leading-[1.1] text-[20px] md:text-[24px] transition-all duration-200">
-                {active.label}
-              </h2>
-              <p className=" font-medium text-[#221139] text-[16px] leading-relaxed">
-                {active.description}
-              </p>
-              <Link
-                href={active.learnMore ?? "#"}
-                className="inline-flex items-center gap-2 text-[16px] font-semibold text-[#221139] hover:text-[#874FFE] transition-colors w-fit group mt-1 "
-              >
-                Learn More
-              </Link>
-            </div>
 
-            <div className="flex flex-col gap-2 mt-2 ">
-              {others.map((cat, i) => {
-                const originalIndex = categories.findIndex(
-                  (c) => c.label === cat.label,
-                );
+        <div className="flex flex-col md:flex-row items-start gap-8 md:gap-12 border-r border-l border-[#C4A9FF] px-4 md:px-12 py-16 md:py-[120px]">
+          
+    
+          <div className="flex flex-col gap-4 flex-1 w-full min-h-[400px] justify-center">
+            <AnimatePresence mode="popLayout">
+              {categories.map((cat, idx) => {
+                const isActive = idx === activeIndex;
+
                 return (
-                  <button
+                  <motion.div
+                    layout 
                     key={cat.label}
-                    onClick={() => setActiveIndex(originalIndex)}
-                    className={`flex items-center justify-between rounded-xl border border-[#C4A9FF] p-4 text-[16px] md:text-[16px] font-medium text-[#221139] hover:bg-[#874FFE] hover:text-[#F9F5FF] transition-all text-left`}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
+                    className="w-full"
                   >
-                    <span className="">{cat.label}</span>
-                    <ArrowRightIcon className="h-5 w-5 text-[#221139] hover:text-[#F9F5FF]" />
-                  </button>
+                    {isActive ? (
+                 
+                      <div className="flex flex-col gap-3 py-2">
+                        <h2 className="font-semibold text-gray-800 tracking-tight leading-[1.1] text-[24px] md:text-[28px]">
+                          {cat.label}
+                        </h2>
+                        
+                        <div className="flex flex-col gap-2">
+                          <p 
+                            className={`font-medium text-[#221139] text-[16px] leading-relaxed transition-all duration-300 ${
+                              isExpanded ? "" : "line-clamp-3"
+                            }`}
+                          >
+                            {cat.description}
+                          </p>
+                          
+                     
+                          <button 
+                            onClick={() => setIsExpanded(!isExpanded)}
+                            className="text-left text-[15px] font-bold text-[#874FFE] hover:text-[#221139] transition-colors w-fit"
+                          >
+                            {isExpanded ? "Show Less" : "See More..."}
+                          </button>
+                        </div>
+
+                        <Link
+                          href={cat.learnMore ?? "#"}
+                          className="inline-flex items-center gap-2 text-[16px] font-semibold text-white bg-[#874FFE] hover:bg-[#6c3fda] px-6 py-2.5 rounded-xl transition-colors w-fit mt-3"
+                        >
+                          Learn More
+                        </Link>
+                      </div>
+                    ) : (
+                 
+                      <button
+                        onClick={() => handleCategoryChange(idx)}
+                        className="w-full group flex items-center justify-between rounded-xl border border-[#C4A9FF] p-4 text-[16px] md:text-[16px] font-medium text-[#221139] hover:bg-[#874FFE] hover:text-[#F9F5FF] transition-all text-left"
+                      >
+                        <span>{cat.label}</span>
+                        <ArrowRightIcon className="h-5 w-5 text-[#221139] group-hover:text-[#F9F5FF] transition-colors" />
+                      </button>
+                    )}
+                  </motion.div>
                 );
               })}
-            </div>
+            </AnimatePresence>
           </div>
 
           <div className="w-full md:w-[48%] shrink-0 order-first md:order-0">
-            <div className="w-full rounded-xl overflow-hidden border border-[#C4A9FF] bg-[#F9F5FF] aspect-[4/3] flex items-center justify-center">
-              {active.imageSrc || defaultImageSrc ? (
-                <img
-                  src={active.imageSrc ?? defaultImageSrc}
-                  alt={active.label}
-                  className="w-full h-full object-cover transition-opacity duration-300"
-                />
-              ) : (
-                <div className="flex flex-col items-center gap-2.5">
-                  <img
-                    src={categorys.find((c) => c.label === active.label)?.image ?? defaultImageSrc}
-                    alt={active.label}
-                    className="w-full h-full object-cover"
+            <div className="w-full rounded-xl overflow-hidden border border-[#C4A9FF] bg-[#F9F5FF] aspect-[4/3] flex items-center justify-center relative shadow-sm">
+              <AnimatePresence mode="wait">
+                {activeImage && (
+                  <motion.img
+                    key={activeImage}
+                    initial={{ opacity: 0, filter: "blur(8px)", scale: 1.05 }}
+                    animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
+                    exit={{ opacity: 0, filter: "blur(4px)", scale: 0.95 }}
+                    transition={{ duration: 0.4 }}
+                    src={activeImage}
+                    alt={active?.label || "Category Image"}
+                    className="absolute w-full h-full object-cover"
                     onError={(e) => {
                       (e.target as HTMLImageElement).style.display = "none";
                     }}
                   />
-                </div>
-              )}
+                )}
+              </AnimatePresence>
             </div>
           </div>
+
         </div>
       </div>
     </section>

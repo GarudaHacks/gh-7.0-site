@@ -10,6 +10,8 @@ import SectionSpeakers from "@/sections/SectionSpeakers";
 import SectionTracks from "@/sections/SectionTracks";
 import SectionTheme from "@/sections/SectionTheme";
 import GarudaByTheNumbers from "@/sections/GarudaByTheNumbers";
+import SectionProjectPast from "@/sections/SectionProjects";
+import SectionRecaps from "@/sections/section-recap";
 
 export default function Home() {
   return (
@@ -19,10 +21,12 @@ export default function Home() {
       <Countdown />
       <SpaceSection />
       <SectionAboutUs />
-      <SectionSpeakers />
       <SectionTheme />
       <SectionTracks />
       <GarudaByTheNumbers />
+      <SectionSpeakers />
+      <SectionProjectPast/>
+      <SectionRecaps />
       <Footer />
     </div>
   );

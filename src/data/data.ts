@@ -49,6 +49,7 @@ export const contributors = [
   "hib4",
   "heryandjaruma",
   "hafidzmrizky",
+  "feblcsack",
 ];
 
 export const speaker = [
