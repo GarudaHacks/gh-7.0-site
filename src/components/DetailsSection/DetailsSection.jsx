@@ -36,21 +36,21 @@ export default function DetailsSection() {
         >
           <div className={styles.detailCard}>
             <span className={styles.detailIcon}><FiCalendar /></span>
-            <div>
+            <div className={styles.detailText}>
               <span className={styles.detailLabel}>Date</span>
-              <span className={styles.detailValue}>July 2026 · TBA</span>
+              <span className={styles.detailValue}>July 16-18, 2026</span>
             </div>
           </div>
           <div className={styles.detailCard}>
             <span className={styles.detailIcon}><FiMapPin /></span>
-            <div>
+            <div className={styles.detailText}>
               <span className={styles.detailLabel}>Location</span>
-              <span className={styles.detailValue}>TBA</span>
+              <span className={styles.detailValue}>Universitas Multimedia Nusantara</span>
             </div>
           </div>
           <div className={styles.detailCard}>
             <span className={styles.detailIcon}><FiUsers /></span>
-            <div>
+            <div className={styles.detailText}>
               <span className={styles.detailLabel}>Hackers</span>
               <span className={styles.detailValue}>500+</span>
             </div>

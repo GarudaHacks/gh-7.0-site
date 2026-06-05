@@ -46,7 +46,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 1.6, duration: 0.8 }}
         >
-          July 2026 · Exact Dates TBA
+          July 16-18, 2026
         </motion.div>
       </div>
 
