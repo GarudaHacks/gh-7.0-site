@@ -1,0 +1,93 @@
+:root {
+  /* Primary */
+  --primary-deep: #67339C;
+  --primary: #8036CB;
+  --primary-light: #8E47D6;
+
+  /* Background */
+  --bg-light: #F9F5FF;
+  --bg-dark: #221139;
+
+  /* Secondary 1 — Blues */
+  --blue: #5079FF;
+  --blue-mid: #6689FE;
+  --blue-light: #9AB1FF;
+
+  /* Secondary 2 — Purples */
+  --purple: #874FFE;
+  --purple-mid: #AD87FF;
+  --purple-light: #C4A9FF;
+
+  /* Secondary 3 — Corals */
+  --coral: #FE636A;
+  --coral-mid: #FA777E;
+  --coral-light: #FF8970;
+
+  /* Typography */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-sub: 'Montserrat', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+
+  /* Glass */
+  --glass-bg: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: 16px;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  background: var(--bg-dark);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 3px;
+}
+
+/* Selection */
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

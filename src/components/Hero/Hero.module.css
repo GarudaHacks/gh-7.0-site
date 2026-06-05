@@ -1,0 +1,131 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 1.5rem 3rem;
+  z-index: 1;
+}
+
+.glow {
+    text-shadow: 0 0 60px rgba(135, 79, 254, 0.3), 0 0 120px rgba(80, 121, 255, 0.15);
+    color: #ffffff;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 900px;
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  line-height: 1.05;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 60px rgba(135, 79, 254, 0.3),
+    0 0 120px rgba(80, 121, 255, 0.15);
+  position: relative;
+}
+
+.titleLine {
+  display: block;
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #ffffff 40%,
+    var(--purple-light) 50%,
+    #ffffff 60%,
+    #ffffff 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 6s ease-in-out infinite;
+}
+
+.version {
+  background: linear-gradient(135deg, var(--coral) 0%, var(--coral-light) 50%, var(--purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: clamp(0.85rem, 2vw, 1.25rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--purple-light);
+}
+
+.dateTag {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 0.5rem;
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scrollLine {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scaleY(1.3);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 5rem 1rem 2rem;
+  }
+
+  .content {
+    gap: 1.2rem;
+  }
+
+  .dateTag {
+    font-size: 0.75rem;
+  }
+}
