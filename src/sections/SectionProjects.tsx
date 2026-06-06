@@ -200,7 +200,7 @@ export default function SectionProjectPast() {
 
         <div className="py-14 md:py-[90px] flex flex-col gap-10 w-full border-r border-l border-[#C4A9FF] overflow-hidden">
           <div className="flex items-center justify-center px-6 w-full">
-            <h2 className="font-bold text-[#221139] text-3xl md:text-[36px] leading-normal text-center tracking-tight">
+            <h2 className="font-bold text-[#221139] text-3xl md:text-[48px] leading-normal text-center tracking-tight">
               Project Past
             </h2>
           </div>
