@@ -11,7 +11,7 @@ export default function SectionTheme() {
           <div className="flex flex-col gap-2 items-start w-full">
             <div className="flex items-start justify-center w-full">
               <div className="flex-1 flex items-center justify-center px-3 py-2">
-                <h2 className="flex-1  font-bold text-[#221139] text-2xl md:text-[32px] leading-normal text-center">
+                <h2 className="flex-1  font-bold text-[#221139] text-2xl md:text-[48px] leading-normal text-center">
                   Introducing Our Theme
                 </h2>
               </div>

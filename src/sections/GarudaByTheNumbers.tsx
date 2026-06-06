@@ -8,7 +8,7 @@ export default function GarudaByTheNumbers() {
       <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-x border-[#C4A9FF]">
         <div className="py-[60px] md:py-[80px] lg:py-[120px] border-x border-[#C4A9FF]">
           <div className="grid grid-cols-1 items-center gap-4 md:grid-cols-3 p-12">
-            <h3 className="text-[#221139] md:col-span-3 text-center font-semibold text-[20px] md:text-[26px] lg:text-[32px]">
+            <h3 className="text-[#221139] md:col-span-3 text-center font-semibold text-[24px] md:text-[48px] lg:text-[48px]">
               Garuda Hacks by the numbers
             </h3>
           </div>
