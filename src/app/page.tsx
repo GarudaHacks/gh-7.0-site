@@ -16,6 +16,7 @@ import SectionProjectPast from "@/sections/SectionProjects";
 import SectionRecaps from "@/sections/section-recap";
 import StickerPeel from "@/components/StickerPeel";
 import { motion } from "framer-motion";
+import SectionJudges from "@/sections/SectionJudges";
 
 export default function Home() {
   return (
@@ -41,6 +42,7 @@ export default function Home() {
       <SectionTracks />
       <GarudaByTheNumbers />
       <SectionSpeakers />
+      <SectionJudges />
       <section id="projects">
         <SectionProjectPast/>
       </section>
