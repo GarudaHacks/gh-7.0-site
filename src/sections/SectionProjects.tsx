@@ -3,57 +3,19 @@
 import { useState } from "react";
 import { XMarkIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 import CornerCube from "@/components/Cornercube";
+// 1. Import projects dari data.ts
+import { projects } from "@/data/data";
 
-// ─── DUMMY DATA ────────────────────────────────────────────────────
+// 2. Sesuaikan interface dengan format yang ada di data.ts
 interface Project {
-  id: string;
   title: string;
   number: string;
-  image: string;
   description: string;
+  image: string;
+  link?: string;
   teamName: string;
 }
 
-const projects: Project[] = [
-  {
-    id: "proj-1",
-    title: "Jedela",
-    number: "01",
-    image: "https://assets.aceternity.com/placeholder-checkered.png",
-    description:
-      "Jendela helps ex-convicts find jobs by connecting them with training centers and business partners...",
-    teamName: "Team name",
-  },
-  {
-    id: "proj-2",
-    title: "Jedela",
-    number: "02",
-    image: "https://assets.aceternity.com/placeholder-checkered.png",
-    description:
-      "Jendela helps ex-convicts find jobs by connecting them with training centers and business partners...",
-    teamName: "Team name",
-  },
-  {
-    id: "proj-3",
-    title: "Jedela",
-    number: "03",
-    image: "https://assets.aceternity.com/placeholder-checkered.png",
-    description:
-      "Jendela helps ex-convicts find jobs by connecting them with training centers and business partners...",
-    teamName: "Team name",
-  },
-  {
-    id: "proj-4",
-    title: "Jedela",
-    number: "04",
-    image: "https://assets.aceternity.com/placeholder-checkered.png",
-    description:
-      "Jendela helps ex-convicts find jobs by connecting them with training centers and business partners...",
-    teamName: "Team name",
-  },
-];
-
-// ─── KOMPONEN CARD (Telah Di-upgrade UI/UX-nya) ────────────────────
 function ProjectCard({
   project,
   onOpen,
@@ -66,10 +28,8 @@ function ProjectCard({
       className="flex flex-col gap-4 mx-4 w-[340px] shrink-0 group cursor-pointer bg-white border border-[#C4A9FF]/60 hover:border-[#874FFE] rounded-2xl p-5 shadow-sm hover:shadow-xl hover:shadow-[#C4A9FF]/20 hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden"
       onClick={() => onOpen(project)}
     >
-      {/* Background tint tipis pas di-hover biar makin premium */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#F9F5FF]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
-      {/* Header: Title & Number Badge */}
       <div className="relative z-10 flex justify-between items-center mb-1">
         <h3 className="font-bold text-[#221139] text-[19px] group-hover:text-[#874FFE] transition-colors duration-300">
           {project.title}
@@ -79,7 +39,6 @@ function ProjectCard({
         </span>
       </div>
 
-      {/* Image / Placeholder */}
       <div className="relative z-10 w-full h-[190px] bg-[#EAE5F4] rounded-xl overflow-hidden border border-[#C4A9FF]/40 group-hover:border-[#C4A9FF] transition-colors">
         <img
           src={project.image}
@@ -93,12 +52,10 @@ function ProjectCard({
         />
       </div>
 
-      {/* Description */}
       <p className="relative z-10 font-medium text-[#5B4A7A] text-[15px] leading-relaxed line-clamp-3">
         {project.description}
       </p>
 
-      {/* Button (Dibikin Full Width biar proporsi seimbang) */}
       <button className="relative z-10 mt-auto bg-[#F9F5FF] border border-[#C4A9FF] group-hover:bg-[#874FFE] group-hover:border-[#874FFE] transition-colors duration-300 text-[#221139] group-hover:text-white text-[14px] font-semibold py-3 px-4 rounded-xl w-full flex justify-between items-center">
         <span>{project.teamName}</span>
         <ArrowRightIcon className="w-4 h-4 stroke-[2.5]" />
@@ -107,7 +64,6 @@ function ProjectCard({
   );
 }
 
-// ─── KOMPONEN MODAL (Tetap sama) ───────────────────────────────────
 function ProjectModal({
   project,
   onClose,
@@ -158,6 +114,18 @@ function ProjectModal({
         <div className="font-medium text-[#221139] text-[15px] leading-relaxed">
           {project.description}
         </div>
+        
+        {/* Tambahan opsional: Kalau ada link, tampilin tombol buat visit project-nya */}
+        {project.link && (
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-6 inline-block w-full text-center bg-[#874FFE] text-white py-3 rounded-xl font-semibold hover:bg-[#67339C] transition-colors"
+          >
+            View Project
+          </a>
+        )}
       </div>
     </div>
   );
@@ -206,20 +174,16 @@ export default function SectionProjectPast() {
           </div>
 
           <div className="relative flex w-full overflow-hidden">
-            {/* Animasi jalan di-pause pas di hover biar user gampang baca dan klik */}
             <div className="flex w-max animate-infinite-scroll hover:[animation-play-state:paused] py-4">
               {doubleProjects.map((proj, index) => (
                 <ProjectCard
-                  key={`${proj.id}-${index}`}
+                  // 3. Ubah key karena property id dihapus, ganti pakai kombinasi number & index
+                  key={`${proj.number}-${index}`}
                   project={proj}
                   onOpen={setSelected}
                 />
               ))}
             </div>
-
-            {/* Gradient untuk transisi masuk & keluar di pinggir layar */}
-            {/* <div className="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-28 bg-gradient-to-r from-[#F9F5FF] via-[#F9F5FF]/80 to-transparent" />
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-28 bg-gradient-to-l from-[#F9F5FF] via-[#F9F5FF]/80 to-transparent" /> */}
           </div>
         </div>
       </div>

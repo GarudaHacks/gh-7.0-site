@@ -129,25 +129,49 @@ export const projects = [
   },
 ];
 
+export const judges = [
+  {
+    quote:
+      "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
+    name: "Sarah Chen",
+    designation: "Product Manager at TechFlow",
+    src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    quote:
+      "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
+    name: "Michael Rodriguez",
+    designation: "CTO at InnovateSphere",
+    src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    quote:
+      "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
+    name: "Emily Watson",
+    designation: "Operations Director at CloudScale",
+    src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+];
+
 export const categorys = [
   {
-    label: "Track 1",
+    label: "Health",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "Health is more than just access to hospitals. It includes prevention, mental well-being, nutrition, environment, and community support. In Indonesia, disparities persist between urban and rural populations, with challenges in healthcare access, health literacy, affordability, and cultural attitudes toward wellbeing. At the same time, lifestyle-related diseases and mental health issues are rising, especially among younger populations.",
     learnMore: "#",
     image: "#",
   },
   {
-    label: "Track 2",
+    label: "Safety",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "Safety is a fundamental need for individuals and communities to thrive. In Indonesia, people face a wide range of risks, from natural disasters such as earthquakes or floods to rising concerns about crime, public safety, and even economic instability. Many communities lack timely access to accurate information, coordinated response systems, and recovery resources.",
     learnMore: "#",
     image: "#",
   },
   {
-    label: "Track 3",
+    label: "Agriculture & Food Systems",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "As an archipelago with vast fertile lands and rich seas, Indonesia is naturally an agrarian and maritime powerhouse. However, our farmers and fishers, the backbone of Indonesia’s food security, remain among the most economically vulnerable citizens. They often face significant hurdles, including aging infrastructure, volatile market prices, and the growing impact of climate change on crop yields and fish stocks.",
     learnMore: "#",
     image: "#",
   },

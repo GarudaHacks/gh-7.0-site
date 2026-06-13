@@ -18,13 +18,14 @@ export default function Navbar({ className = "" }: { className?: string }) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const points = [
-    // dott bawah
     { pos: "-left-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
     { pos: "-right-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
-
-    // dott bawah
-    { pos: "left-[7px] -bottom-[10px] lg:left-[111px] lg:-bottom-[10px] xl:left-[153px] xl:-bottom-[10px]" },
-    { pos: "right-[7px] -bottom-[10px] lg:right-[111px] lg:-bottom-[10px] xl:right-[153px] xl:-bottom-[10px]"},
+    {
+      pos: "left-[7px] -bottom-[10px] lg:left-[111px] lg:-bottom-[10px] xl:left-[153px] xl:-bottom-[10px]",
+    },
+    {
+      pos: "right-[7px] -bottom-[10px] lg:right-[111px] lg:-bottom-[10px] xl:right-[153px] xl:-bottom-[10px]",
+    },
   ];
 
   useEffect(() => {
@@ -63,7 +64,7 @@ export default function Navbar({ className = "" }: { className?: string }) {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="px-3 py-2 font-medium text-[#221139] text-[16px] hover:text-[#8E47D6] transition-colors whitespace-nowrap"
+                  className="px-3 py-2 font-medium text-center text-[#221139] text-[16px] hover:text-[#8E47D6] transition-colors whitespace-nowrap"
                 >
                   {link.label}
                 </a>
@@ -72,7 +73,9 @@ export default function Navbar({ className = "" }: { className?: string }) {
 
             <div className="hidden md:flex items-center">
               <a
-                href="#apply"
+                href="https://portal.garudahacks.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="cursor-pointer rounded-[6px] border border-[#7c3aed] bg-[#8e47d6] text-white px-8 py-3 transition-all duration-200 ease-out [box-shadow:inset_0_-1.5px_1px_#8e47d6,inset_0_-6px_1px_#712cb6] hover:translate-y-[1px] hover:[box-shadow:inset_0_4px_4px_#67339c]"
               >
                 Apply Now
@@ -107,12 +110,12 @@ export default function Navbar({ className = "" }: { className?: string }) {
       />
 
       <div
-        className={`md:hidden fixed bottom-0 left-0 right-0 z-[110] bg-[#F9F5FF] rounded-t-[12px] shadow-2xl transition-transform duration-300 ease-out px-6 py-2 ${
+        className={`md:hidden fixed bottom-0 left-0 right-0 z-[110] bg-[#F9F5FF] border-t border-[#C4A9FF] rounded-t-[12px] shadow-2xl transition-transform duration-300 ease-out px-6 py-2 ${
           mobileOpen ? "translate-y-0" : "translate-y-full"
         }`}
       >
         <div className="flex justify-center mb-2 p-2">
-          <div className="w-18 h-1.5 rounded-full bg-gray-300" />
+          <div className="w-18 h-1.5 rounded-full bg-[#C4A9FF]" />
         </div>
 
         <div className="flex flex-col gap-2">
@@ -121,7 +124,7 @@ export default function Navbar({ className = "" }: { className?: string }) {
               key={link.label}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="px-4 py-4 font-medium text-[#221139] text-[16px] border-b border-gray-100 active:bg-purple-50 transition-colors"
+              className="px-4 py-4 font-medium text-center text-[#221139] text-[16px] border-b border-[#C4A9FF]/40 active:bg-purple-50 transition-colors"
             >
               {link.label}
             </a>
@@ -129,9 +132,9 @@ export default function Navbar({ className = "" }: { className?: string }) {
           <a
             href="#apply"
             onClick={() => setMobileOpen(false)}
-            className="btn-bold font-medium text-[16px] h-14 rounded-xl hover:bg-[#8036CB] transition-colors text-center shadow-lg shadow-purple-200"
+            className="btn-bold font-medium rounded-[6px] border border-[#7c3aed] bg-[#8e47d6] text-[16px] h-12 hover:bg-[#8036CB] text-white transition-colors text-center shadow-lg shadow-purple-200 mt-2"
           >
-            Apply Now
+            <p className="text-lg mt-2"> Apply Now</p>
           </a>
         </div>
       </div>
