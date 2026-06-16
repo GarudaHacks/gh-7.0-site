@@ -9,7 +9,7 @@ import CornerCube from "@/components/Cornercube";
 
 const stats = [
   { value: "6,000+", label: "Participants" },
-  { value: "48H", label: "Nonstop hacking" },
+  { value: "30H", label: "Nonstop hacking" },
   { value: "120+", label: "Projects built" },
   { value: "$50K", label: "In prizes" },
 ];
@@ -446,7 +446,7 @@ export default function SectionRecaps() {
               Recap
             </h2>
             <p className="text-[#5b4a7a] text-[16px] md:text-base max-w-md leading-relaxed font-medium">
-              Southeast Asia's largest hackathon — six hours of energy, code,
+              Southeast Asia's largest hackathon — 30 hours of energy, code,
               and community.
             </p>
           </div>
@@ -490,8 +490,7 @@ export default function SectionRecaps() {
                     Relive the Moment
                   </h3>
                   <p className="text-[#9b7ecb] text-sm mt-1.5 leading-relaxed max-w-sm">
-                    6,000+ builders, 48 sleepless hours, and one shared mission
-                    — hover to explore.
+                    6,000+ builders, 30 sleepless hours.
                   </p>
                 </motion.div>
               </div>

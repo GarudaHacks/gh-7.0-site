@@ -7,20 +7,15 @@ const footerLinks = [
   {
     title: "Garuda Hacks",
     links: [
-      { label: "Our Philosophy", href: "#" },
+      { label: "Devpost", href: "#" },
       { label: "Team & Board", href: "#" },
       { label: "Past Projects", href: "#" },
       { label: "Sponsorship", href: "#" },
-      { label: "Press Inquiries", href: "#" },
-      { label: "Donate", href: "#" },
     ],
   },
   {
     title: "Resources",
     links: [
-      { label: "Hackathon Tracks", href: "#" },
-      { label: "Hardware Lab", href: "#" },
-      { label: "Mentorship Program", href: "#" },
       { label: "Guide Book 7.0", href: "#" },
       { label: "FAQ", href: "#" },
     ],
@@ -28,11 +23,7 @@ const footerLinks = [
   {
     title: "Community",
     links: [
-      { label: "Discord Server", href: "#" },
-      { label: "Local Events", href: "#" },
-      { label: "Blog & Updates", href: "#" },
       { label: "Alumni Network", href: "#" },
-      { label: "Code of Conduct", href: "#" },
     ],
   },
 ];

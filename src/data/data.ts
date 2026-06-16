@@ -153,26 +153,159 @@ export const judges = [
   },
 ];
 
+// ... (biarkan data AboutData, byTheNumbers, contributors, speaker, projects seperti sebelumnya)
+
+export const offlineJudges = [
+  {
+    quote: "Kutipan untuk offline judge bisa diisi di sini.",
+    name: "Angelika Putri",
+    designation: "Judge",
+    src: "/offline/Angelika Putri.jpg",
+  },
+  {
+    quote: "Kutipan untuk offline judge bisa diisi di sini.",
+    name: "Billtraviano Harda",
+    designation: "Judge",
+    src: "/offline/BillHardaFotoJas - Billtraviano Harda.jpeg",
+  },
+  {
+    quote: "Kutipan untuk offline judge bisa diisi di sini.",
+    name: "Arief Budiman",
+    designation: "Judge",
+    src: "/offline/Copy of LRP_5501 - Arief Budiman.jpeg",
+  },
+  {
+    quote: "Kutipan untuk offline judge bisa diisi di sini.",
+    name: "Hervina Safira",
+    designation: "Judge",
+    src: "/offline/DSC08090-min - Hervina Safira.jpeg",
+  },
+  {
+    quote: "Kutipan untuk offline judge bisa diisi di sini.",
+    name: "Taro Lay",
+    designation: "Judge",
+    src: "/offline/IMG_0787 - Taro Lay.jpeg",
+  },
+  {
+    quote: "Kutipan untuk offline judge bisa diisi di sini.",
+    name: "Nunung Nurul Qomariyah",
+    designation: "Judge",
+    src: "/offline/IMG_8824 - Nunung Nurul Qomariyah.jpeg",
+  },
+  {
+    quote: "Kutipan untuk offline judge bisa diisi di sini.",
+    name: "Julian Sukmana Putra",
+    designation: "Judge",
+    src: "/offline/IMG_9064 - Julian Sukmana Putra.jpeg",
+  },
+  {
+    quote: "Kutipan untuk offline judge bisa diisi di sini.",
+    name: "Louis",
+    designation: "Judge",
+    src: "/offline/louis.png",
+  },
+  {
+    quote: "Kutipan untuk offline judge bisa diisi di sini.",
+    name: "Mario Caesar",
+    designation: "Judge",
+    src: "/offline/Mario Caesar.jpeg",
+  },
+  {
+    quote: "Kutipan untuk offline judge bisa diisi di sini.",
+    name: "Martinus Indra Senjaya",
+    designation: "Judge",
+    src: "/offline/Martinus photo - Martinus Indra Senjaya.jpeg",
+  },
+  {
+    quote: "Kutipan untuk offline judge bisa diisi di sini.",
+    name: "Nino Wandhana",
+    designation: "Judge",
+    src: "/offline/Nino Headshot - Nino Wandhana.png",
+  },
+  {
+    quote: "Kutipan untuk offline judge bisa diisi di sini.",
+    name: "Rina Fitri",
+    designation: "Judge",
+    src: "/offline/rina-fitri.jpeg",
+  },
+  {
+    quote: "Kutipan untuk offline judge bisa diisi di sini.",
+    name: "Sandy Kusuma",
+    designation: "Judge",
+    src: "/offline/SK Alam Sutra - Sandy Kusuma.jpeg",
+  },
+  {
+    quote: "Kutipan untuk offline judge bisa diisi di sini.",
+    name: "Timotius Haniel",
+    designation: "Judge",
+    src: "/offline/Timotius Haniel.jpeg",
+  }
+];
+
+export const onlineJudges = [
+  {
+    quote: "Kutipan untuk online judge bisa diisi di sini.",
+    name: "Bintang Fathur Rahman",
+    designation: "Judge",
+    src: "/online/Bintang Fathur Rahman.png",
+  },
+  {
+    quote: "Kutipan untuk online judge bisa diisi di sini.",
+    name: "Fariz Eda",
+    designation: "Judge",
+    src: "/online/Fariz Eda.jpeg",
+  },
+  {
+    quote: "Kutipan untuk online judge bisa diisi di sini.",
+    name: "Jaya Iskandar",
+    designation: "Judge",
+    src: "/online/Jaya Iskandar.jpeg",
+  },
+  {
+    quote: "Kutipan untuk online judge bisa diisi di sini.",
+    name: "Julian Chan",
+    designation: "Judge",
+    src: "/online/Julian Chan.jpeg",
+  },
+  {
+    quote: "Kutipan untuk online judge bisa diisi di sini.",
+    name: "Mathilda Dellanova",
+    designation: "Judge",
+    src: "/online/Mathilda Dellanova.jpeg",
+  },
+  {
+    quote: "Kutipan untuk online judge bisa diisi di sini.",
+    name: "Wily Goldramijaya",
+    designation: "Judge",
+    src: "/online/Wily Goldramijaya.jpeg",
+  }
+];
+
+
+
 export const categorys = [
   {
     label: "Health",
     description:
       "Health is more than just access to hospitals. It includes prevention, mental well-being, nutrition, environment, and community support. In Indonesia, disparities persist between urban and rural populations, with challenges in healthcare access, health literacy, affordability, and cultural attitudes toward wellbeing. At the same time, lifestyle-related diseases and mental health issues are rising, especially among younger populations.",
     learnMore: "#",
-    image: "#",
+    // Gambar: Dokter/Tenaga Medis sedang mengecek data via tablet digital (Health Tech vibe)
+    image: "https://images.unsplash.com/photo-1532938911079-1b06ac7ce222?auto=format&fit=crop&w=800&q=80",
   },
   {
     label: "Safety",
     description:
       "Safety is a fundamental need for individuals and communities to thrive. In Indonesia, people face a wide range of risks, from natural disasters such as earthquakes or floods to rising concerns about crime, public safety, and even economic instability. Many communities lack timely access to accurate information, coordinated response systems, and recovery resources.",
     learnMore: "#",
-    image: "#",
+    // Gambar: Helikopter rescue / tim SAR lagi bertugas (Disaster Response & Safety vibe)
+    image: "https://images.unsplash.com/photo-1502318217862-aa4e294ba654?auto=format&fit=crop&w=800&q=80",
   },
   {
     label: "Agriculture & Food Systems",
     description:
       "As an archipelago with vast fertile lands and rich seas, Indonesia is naturally an agrarian and maritime powerhouse. However, our farmers and fishers, the backbone of Indonesia’s food security, remain among the most economically vulnerable citizens. They often face significant hurdles, including aging infrastructure, volatile market prices, and the growing impact of climate change on crop yields and fish stocks.",
     learnMore: "#",
-    image: "#",
+    // Gambar: Lahan agrikultur modern atau penggunaan traktor/drone di lahan hijau (Agritech vibe)
+    image: "https://images.unsplash.com/photo-1586771107445-d3af2e8c2538?auto=format&fit=crop&w=800&q=80",
   },
 ];
