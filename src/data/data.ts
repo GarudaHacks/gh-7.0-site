@@ -40,20 +40,83 @@ export type TeamMember = {
   name: string;
   photo: string;
 };
-
-export const teamMembers: TeamMember[] = [
-  { name: "Dominic Moreno", photo: "placeholder.png" },
-  { name: "Ralph Benedict", photo: "placeholder.png" },
-  { name: "Amelia Muliawati", photo: "placeholder.png" },
-  { name: "Jessica Wijoyo", photo: "placeholder.png" },
-  { name: "Margery Jessica", photo: "placeholder.png" },
-  { name: "Eleonora Ansella", photo: "placeholder.png" },
-  { name: "Putra Pratama", photo: "placeholder.png" },
-  { name: "Emily Jade", photo: "placeholder.png" },
-  { name: "Austin Sim", photo: "placeholder.png" },
-  { name: "Jericho Siregar", photo: "placeholder.png" },
-  { name: "Hafidz Rizky", photo: "placeholder.png" },
-  { name: "Winner Rasendriya", photo: "placeholder.png" },
+ 
+export const managingDirectors: TeamMember[] = [
+  { name: "Dominic Moreno", photo: "dom.jpg" },
+  { name: "Ralph Benedict", photo: "placeholder" },
+];
+ 
+export type TeamGroup = {
+  team: string;
+  members: TeamMember[];
+};
+ 
+export const teamGroups: TeamGroup[] = [
+  {
+    team: "Marketing & Design",
+    members: [
+      { name: "Eleonora Ansella", photo: "ansella.jpg" },
+      { name: "Margery Jessica", photo: "margery.jpg" },
+      { name: "Keanan Halim", photo: "placeholder" },
+      { name: "Alif Farham", photo: "alif.jpeg" },
+      { name: "Rainier Saputra", photo: "rainier.jpg" },
+      { name: "Vallerie Anne", photo: "vallerie.png" },
+      { name: "Muhammad Fahruridho", photo: "placeholder" },
+      { name: "Megan Sudjarwadi", photo: "placeholder" },
+    ],
+  },
+  {
+    team: "Content",
+    members: [
+      { name: "Amelia Muliawati", photo: "amel.png" },
+      { name: "Jessica Wijoyo", photo: "jessica.jpg" },
+      { name: "Topan Prasetyo", photo: "placeholder" },
+      { name: "Luminous Insani", photo: "placeholder" },
+      { name: "Khalila Kalla", photo: "placeholder" },
+    ],
+  },
+  {
+    team: "Logistics",
+    members: [
+      { name: "Emily Jade", photo: "emily.jpeg" },
+      { name: "Putra Pratama", photo: "putra.jpg" },
+      { name: "Josephine Yuwono", photo: "placeholder" },
+      { name: "Adrianna Isanto", photo: "placeholder" },
+      { name: "Lyan Callista", photo: "lyan.png" },
+      { name: "Kimberly Zhou", photo: "placeholder" },
+      { name: "Noel Siregar", photo: "placeholder" },
+      { name: "Aufy Mulyadi", photo: "aufy.png" },
+      { name: "Adnaan Gumanti", photo: "placeholder" },
+    ],
+  },
+  {
+    team: "Partnerships",
+    members: [
+      { name: "Jericho Siregar", photo: "jericho.jpg" },
+      { name: "Austin Sim", photo: "austin.jpg" },
+      { name: "Inola Adriana", photo: "placeholder" },
+      { name: "Natha Lie", photo: "placeholder" },
+      { name: "Christopher Lim", photo: "placeholder" },
+      { name: "Mieko Lim", photo: "placeholder" },
+      { name: "Wenny Utami", photo: "placeholder" },
+    ],
+  },
+  {
+    team: "Tech",
+    members: [
+      { name: "Hafidz Rizky", photo: "rizky.png" },
+      { name: "Winner Rasendriya", photo: "winner.jpg" },
+      { name: "Heryan Djaruma", photo: "ryan.jpeg" },
+      { name: "Alifian Abdiel", photo: "placeholder" },
+      { name: "Cheryl Aurelia", photo: "placeholder" },
+      { name: "Mohammad Daffa", photo: "placeholder" },
+      { name: "Hans Figo", photo: "placeholder" },
+      { name: "Fatih Nararya", photo: "fatih.jpg" },
+      { name: "Grace Marin", photo: "placeholder" },
+      { name: "Jayden Katuari", photo: "placeholder" },
+      { name: "Fawwaz Humam", photo: "placeholder" },
+    ],
+  },
 ];
 
 export const contributors = [
