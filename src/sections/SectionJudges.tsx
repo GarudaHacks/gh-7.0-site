@@ -2,12 +2,11 @@
 
 import CornerCube from "@/components/Cornercube";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
-import { judges } from "../data/data";
+// Import dua data baru yang udah kita pisah
+import { onlineJudges, offlineJudges } from "../data/data";
 
 export default function SectionJudges() {
-  
-
-  // Posisi dots dari Kode A
+  // Posisi dots
   const points = [
     // dott atas
     { pos: "-left-[-31px] -top-[10px] hidden lg:hidden xl:flex z-40" },
@@ -20,7 +19,7 @@ export default function SectionJudges() {
     { pos: "-right-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
     // dott bawah
     { pos: "left-[7px] -bottom-[10px] lg:left-[111px] lg:-bottom-[10px] xl:left-[153px] xl:-bottom-[10px]" },
-    {pos: "right-[7px] -bottom-[10px] lg:right-[111px] lg:-bottom-[10px] xl:right-[153px] xl:-bottom-[10px]" },
+    { pos: "right-[7px] -bottom-[10px] lg:right-[111px] lg:-bottom-[10px] xl:right-[153px] xl:-bottom-[10px]" },
   ];
 
   return (
@@ -36,16 +35,24 @@ export default function SectionJudges() {
         
         <div className="pl-6 md:pl-0 py-14 md:py-[80px] flex flex-col gap-[14px] items-start w-full border-r border-l border-[#C4A9FF] overflow-hidden">
           
-          {/* Header Title */}
+          {/* ===================== OFFLINE JUDGES ===================== */}
           <div className="flex items-center justify-center px-3 py-2 w-full mb-4">
             <h2 className="flex-1 font-bold text-[#221139] text-[24px] md:text-[48px] leading-normal text-center">
-              Meet The Judges
+              Meet The Offline Judges
             </h2>
           </div>
+          <div className="w-full mb-16">
+            <AnimatedTestimonials testimonials={offlineJudges} />
+          </div>
 
-          {/* Modul Card dari Kode B */}
+          {/* ===================== ONLINE JUDGES ===================== */}
+          <div className="flex items-center justify-center px-3 py-2 w-full mb-4 mt-8 md:mt-12">
+            <h2 className="flex-1 font-bold text-[#221139] text-[24px] md:text-[48px] leading-normal text-center">
+              Meet The Online Judges
+            </h2>
+          </div>
           <div className="w-full">
-            <AnimatedTestimonials testimonials={judges} />
+            <AnimatedTestimonials testimonials={onlineJudges} />
           </div>
 
         </div>
