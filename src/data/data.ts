@@ -15,7 +15,7 @@ export const byTheNumbers = [
   {
     title: "partisipants",
     number: "6408",
-    description: "Total Partisipants",
+    description: "Total Participants",
     iconBaseName: "partisipant-line",
     hoverIcon: "partisipant-fill",
   },
@@ -34,6 +34,26 @@ export const byTheNumbers = [
     iconBaseName: "ghCoin",
     hoverIcon: "GH-coin-fill",
   },
+];
+
+export type TeamMember = {
+  name: string;
+  photo: string;
+};
+
+export const teamMembers: TeamMember[] = [
+  { name: "Dominic Moreno", photo: "placeholder.png" },
+  { name: "Ralph Benedict", photo: "placeholder.png" },
+  { name: "Amelia Muliawati", photo: "placeholder.png" },
+  { name: "Jessica Wijoyo", photo: "placeholder.png" },
+  { name: "Margery Jessica", photo: "placeholder.png" },
+  { name: "Eleonora Ansella", photo: "placeholder.png" },
+  { name: "Putra Pratama", photo: "placeholder.png" },
+  { name: "Emily Jade", photo: "placeholder.png" },
+  { name: "Austin Sim", photo: "placeholder.png" },
+  { name: "Jericho Siregar", photo: "placeholder.png" },
+  { name: "Hafidz Rizky", photo: "placeholder.png" },
+  { name: "Winner Rasendriya", photo: "placeholder.png" },
 ];
 
 export const contributors = [

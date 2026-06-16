@@ -13,13 +13,12 @@ import SectionTracks from "@/sections/SectionTracks";
 import SectionTheme from "@/sections/SectionTheme";
 import GarudaByTheNumbers from "@/sections/GarudaByTheNumbers";
 import SectionProjectPast from "@/sections/SectionProjects";
+import Sponsors from "@/sections/SectionSponsors";
 import SectionRecaps from "@/sections/section-recap";
+import SectionTeam from "@/sections/SectionTeam";
 import StickerPeel from "@/components/StickerPeel";
 import { motion } from "framer-motion";
-// import SectionJudges from "@/sections/SectionJudges"; <-ganti kalo udah fix
-import Sponsors from "@/sections/SectionSponsors";
-import TBAJudges from "@/sections/TBA/TBAJudges";
-import TBASpeakers from "@/sections/TBA/TBASpeakers";
+import SectionJudges from "@/sections/SectionJudges";
 
 export default function Home() {
   return (
@@ -44,16 +43,17 @@ export default function Home() {
       <SectionTheme />
       <SectionTracks />
       <GarudaByTheNumbers />
-      <Sponsors/>
-      {/* <SectionSpeakers /> */}
-      <TBASpeakers />
-      <TBAJudges />
-      {/* <SectionJudges /> */} 
+      <SectionSpeakers />
+      <SectionJudges />
       <section id="projects">
         <SectionProjectPast/>
       </section>
       
+      <Sponsors/>
+      
       <SectionRecaps />
+
+      <SectionTeam />
       
       <div className="relative w-full">
         <div className="absolute right-4 md:right-12 lg:right-[20px] -top-[80px] md:-top-[130px] z-[100] animate-float-mascot drop-shadow-[0_15px_15px_rgba(0,0,0,0.3)]">

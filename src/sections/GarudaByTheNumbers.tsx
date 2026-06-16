@@ -1,6 +1,5 @@
 import { byTheNumbers } from "@/data/data";
 import Image from "next/image";
-import CarrouselGithub from "../components/CarrouselGithub";
 
 export default function GarudaByTheNumbers() {
   return (
@@ -53,9 +52,8 @@ export default function GarudaByTheNumbers() {
               </div>
             ))}
           </div>
-          <CarrouselGithub />
         </div>
       </div>
     </section>
   );
-}
+} 

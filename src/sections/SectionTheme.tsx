@@ -23,11 +23,10 @@ export default function SectionTheme() {
                   This is Our Theme for This Years Hackathon
                 </p>
                 <p className="font-normal text-sm md:text-[16px] leading-relaxed max-w-[688px] w-full">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book.
+                As the world faces rising healthcare inequality, increasing climate-related disasters, global food insecurity, and growing concerns over public safety, nations are being challenged to build stronger and more resilient systems for the future.
+Indonesia faces structural challenges across health equity, public safety, and food production. Long-term national stability depends on how we strengthen these three foundational pillars. We must build reliable systems that protect public health, minimize regional vulnerabilities, and stabilize the agricultural economy so every community can thrive.
+This year’s theme focuses on developing sustainable solutions for Health, Safety, and Resilience, and Agriculture. You are challenged to create functional tools that address regional disparities and support vulnerable populations. Your work will directly contribute to building a more stable, self-sufficient, and secure future for Indonesia.
+
                 </p>
               </div>
             </div>
