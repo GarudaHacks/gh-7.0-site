@@ -66,6 +66,7 @@ export default function Overview({
 
   return (
     <section
+      id="tracks"
       className={`w-full relative border-b border-[#C4A9FF] ${className}`}
     >
       <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-[#C4A9FF]">

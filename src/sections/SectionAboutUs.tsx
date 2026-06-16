@@ -53,7 +53,7 @@ export default function SectionAboutUs() {
                   <div className="absolute inset-0 bg-[#874FFE] origin-top scale-y-0 group-hover:scale-y-100 transition-transform duration-500 ease-out" />
 
                   <span className="relative z-10 font-bold text-[16px] text-[#221139] group-hover:text-[#F9F5FF] px-4 py-1 whitespace-nowrap transition-colors duration-300">
-                    Go to GH7.0
+                    Apply Now
                   </span>
 
                   <div className="relative z-10 w-12 h-12 rounded-full bg-[#8E47D6] group-hover:bg-[#F9F5FF] flex items-center justify-center shrink-0 transition-colors duration-300">

@@ -14,17 +14,18 @@ interface Sponsor {
 }
 
 const defaultSponsors: Sponsor[] = [
-  { name: "HMIF UMN", size: "Large", logoSrc: "/sponsors/UMN.PNG" },
-  { name: "Centong Biru Cafe", size: "Medium", logoSrc: "/sponsors/centong-biru.PNG" },
-  { name: "Data Sorcerers", size: "Medium", logoSrc: "/sponsors/data-sorcerers.png" },
-  { name: "JAPFA", size: "Medium", logoSrc: "/sponsors/japfa.png" },
-  { name: "LG Sinarmas", size: "Medium", logoSrc: "/sponsors/LGSM.png" },
-  { name: "Build Club", size: "Small", logoSrc: "/sponsors/build-club.png" },
-  { name: "Generation Girl", size: "Small", logoSrc: "/sponsors/generation-girl.png" },
-  { name: "Paragon", size: "Small", logoSrc: "/sponsors/lemon.png" },
-  { name: "Wings-Mie Sedap", size: "Small", logoSrc: "/sponsors/mie-sedap.png" },
-  { name: "Wings-Aquviva", size: "Small", logoSrc: "/sponsors/aquviva.png" },
-  { name: "Wings-Teh Lemon Madu", size: "Small", logoSrc: "/sponsors/lemon.png" },
+  { name: "HMIF UMN", size: "Large", logoSrc: "/sponsors/UMN.PNG", href: "https://hmif.umn.ac.id" },
+  { name: "Centong Biru Cafe", size: "Medium", logoSrc: "/sponsors/centong-biru.PNG", href: "https://www.instagram.com/centongbiru.cafe" },
+  { name: "Data Sorcerers", size: "Medium", logoSrc: "/sponsors/data-sorcerers.png", href: "https://www.data-sorcerers.com" },
+  { name: "JAPFA", size: "Medium", logoSrc: "/sponsors/japfa.png", href: "https://www.japfacomfeed.co.id" },
+  { name: "LG Sinarmas", size: "Medium", logoSrc: "/sponsors/LGSM.png", href: "https://www.lgsinarmas.com" },
+  { name: "Build Club", size: "Small", logoSrc: "/sponsors/build-club.png", href: "https://buildclub.ai" },
+  { name: "Generation Girl", size: "Small", logoSrc: "/sponsors/generation-girl.png", href: "https://generationgirl.org" },
+  { name: "Paragon", size: "Small", logoSrc: "/sponsors/lemon.png", href: "https://www.paragon-innovation.com" },
+  { name: "Wings-Mie Sedap", size: "Small", logoSrc: "/sponsors/mie-sedap.png", href: "https://wingscorp.com/brand-detail/mie-sedaap/" },
+  { name: "Wings-Aquviva", size: "Small", logoSrc: "/sponsors/aquviva.png",  href: "https://aquviva.co.id"  },
+  { name: "Wings-Teh Lemon Madu", size: "Small", logoSrc: "/sponsors/lemon.png", href: "https://wingscorp.com" },
+  { name: "Advan", size: "Small", logoSrc: "/sponsors/advan.png", href: "https://advandigital.com" },
 ];
 
 interface SponsorsProps {
@@ -38,22 +39,25 @@ interface SponsorsProps {
 // 1. Gua kurangin dikit max-width desktop (md) biar muat di layar laptop 100% tanpa turun satu baris.
 const sizeStyles: Record<
   SponsorSize,
-  { box: string; padding: string; nameSize: string }
+  { box: string; padding: string; nameSize: string; nudge: string }
 > = {
   Large: {
-    box: "w-[260px] h-[140px] sm:w-[320px] sm:h-[180px] md:w-[340px] md:h-[190px]",
-    padding: "p-6 md:p-8",
+    box: "w-[200px] h-[210px] sm:w-[230px] sm:h-[250px] md:w-[260px] md:h-[290px]",
+    padding: "p-4 md:p-5",
     nameSize: "text-[14px] md:text-[18px]",
+    nudge: "-translate-y-3 md:-translate-y-4",
   },
   Medium: {
     box: "w-[140px] h-[80px] sm:w-[180px] sm:h-[100px] md:w-[210px] md:h-[120px]",
     padding: "p-4 md:p-6",
     nameSize: "text-[12px] md:text-[14px]",
+    nudge: "",
   },
   Small: {
-    box: "w-[100px] h-[60px] sm:w-[130px] sm:h-[75px] md:w-[150px] md:h-[85px]",
-    padding: "p-2 md:p-4",
+    box: "w-[110px] h-[66px] sm:w-[122px] sm:h-[72px] md:w-[130px] md:h-[80px]",
+    padding: "p-2 md:p-3",
     nameSize: "text-[10px] md:text-[12px]",
+    nudge: "",
   },
 };
 
@@ -80,8 +84,8 @@ export default function Sponsors({
   sponsors = defaultSponsors,
   title = "Our Sponsors",
   description = "Terima kasih kepada para sponsor yang telah mendukung dan menjadi bagian dari perjalanan kami.",
-  // 2. Default small tier diubah ke 6 biar ngisi 1 baris lurus di desktop sesuai jumlah datanya
-  rowsPerTier = [3, 4, 6],
+  // 2. Small tier = 7 biar Advan ikut satu baris sama yang lain di desktop
+  rowsPerTier = [3, 4, 7],
 }: SponsorsProps) {
   const tiers: Tier[] = (["Large", "Medium", "Small"] as SponsorSize[])
     .map((size) => ({ size, sponsors: sponsors.filter((s) => s.size === size) }))
@@ -117,7 +121,7 @@ export default function Sponsors({
           biar logonya agak naik dan gak ketimpa sama label nama sponsor 
         */}
         <div className={`w-full h-full flex flex-col items-center justify-center relative pb-[18px] lg:pb-0 ${style.padding}`}>
-          <div className="relative w-full h-full flex items-center justify-center">
+          <div className={`relative w-full h-full flex items-center justify-center ${style.nudge}`}>
             <Image
               src={sponsor.logoSrc}
               alt={sponsor.name}
@@ -145,7 +149,7 @@ export default function Sponsors({
         href={sponsor.href}
         target="_blank"
         rel="noopener noreferrer"
-        className="shrink-0"
+        className="shrink-0 cursor-pointer"
       >
         {card}
       </a>
@@ -185,7 +189,7 @@ export default function Sponsors({
                   {rows.map((row, rowIdx) => (
                     <div
                       key={rowIdx}
-                      className="flex flex-wrap items-center justify-center gap-3 md:gap-5 w-full"
+                      className="flex flex-wrap items-center justify-center gap-2 md:gap-3 w-full"
                     >
                       {row.map((s) => renderCard(s, tier.size))}
                     </div>
