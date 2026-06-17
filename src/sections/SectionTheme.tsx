@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import StickerPeel from "@/components/StickerPeel";
 
 export default function SectionTheme() {
   const [isReadMore, setIsReadMore] = useState(false);
@@ -12,10 +13,42 @@ export default function SectionTheme() {
   return (
     <section
       id="theme"
-      className="w-full relative border-b border-[#C4A9FF]"
+      className="w-full relative border-b border-[#C4A9FF] overflow-hidden"
     >
       <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-t border-r-[#C4A9FF] border-l-[#C4A9FF]">
-        <div className="px-4 md:px-12 py-16 md:py-[120px] border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF] flex flex-col gap-6 md:gap-8 items-start w-full">
+        <div className="relative px-4 md:px-12 py-16 md:py-[120px] border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF] flex flex-col gap-6 md:gap-8 items-start w-full">
+          {/* Sticker kiri */}
+          <div className="hidden md:block absolute left-3 lg:left-8 top-[35%] z-10 w-[70px] h-[70px] pointer-events-none">
+            <StickerPeel
+              imageSrc="/stickers/garudie1.png"
+              width={70}
+              rotate={-18}
+              peelBackHoverPct={15}
+              peelBackActivePct={25}
+              shadowIntensity={0.25}
+              lightingIntensity={0.1}
+              initialPosition={{ x: 0, y: 0 }}
+              peelDirection={0}
+              className="pointer-events-auto"
+            />
+          </div>
+
+          {/* Sticker kanan */}
+          <div className="hidden md:block absolute right-3 lg:right-10 top-[60%] z-10 w-[60px] h-[60px] pointer-events-none">
+            <StickerPeel
+              imageSrc="/stickers/garudie2.png"
+              width={60}
+              rotate={-10}
+              peelBackHoverPct={15}
+              peelBackActivePct={25}
+              shadowIntensity={0.25}
+              lightingIntensity={0.1}
+              initialPosition={{ x: 0, y: 0 }}
+              peelDirection={0}
+              className="pointer-events-auto"
+            />
+          </div>
+
           <div className="flex flex-col gap-2 items-start w-full">
             <div className="flex items-start justify-center w-full">
               <div className="flex-1 flex items-center justify-center px-3 py-2">
@@ -31,8 +64,10 @@ export default function SectionTheme() {
                   This is Our Theme for This Years Hackathon
                 </p>
                 <div className="font-normal text-sm md:text-[16px] leading-relaxed max-w-[688px] w-full text-justify md:text-center transition-all duration-300">
-                  {isReadMore ? description : `${description.slice(0, charLimit)}...`}
-                  
+                  {isReadMore
+                    ? description
+                    : `${description.slice(0, charLimit)}...`}
+
                   <button
                     onClick={() => setIsReadMore(!isReadMore)}
                     className="inline-block font-semibold text-[#8B5CF6] hover:text-[#7C3AED] ml-1 transition-colors duration-200 ease-in-out"
@@ -42,7 +77,6 @@ export default function SectionTheme() {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
