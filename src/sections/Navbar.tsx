@@ -11,7 +11,7 @@ const navLinks = [
   { label: "Projects", href: "#projects" },
   { label: "Tracks", href: "#tracks" },
   { label: "Recap", href: "#recap" },
-  { label: "2025", href: "#2025" },
+  { label: "2025", href: "2025.garudahacks.com" },
 ];
 
 export default function Navbar({ className = "" }: { className?: string }) {

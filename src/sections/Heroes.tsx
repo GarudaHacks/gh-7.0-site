@@ -167,14 +167,31 @@ export default function Heroes() {
         .animate-float-idle {
           animation: floatIdle 3s ease-in-out infinite;
         }
+        @keyframes hudBlink {
+          0%, 49% { opacity: 1; }
+          50%, 100% { opacity: 0; }
+        }
+        .hud-cursor {
+          animation: hudBlink 1.1s steps(1) infinite;
+        }
+        @keyframes hudArrowBounce {
+          0%, 100% { transform: translateY(0); opacity: 0.55; }
+          50% { transform: translateY(5px); opacity: 1; }
+        }
+        .hud-arrows {
+          animation: hudArrowBounce 1.6s ease-in-out infinite;
+        }
       `}} />
 
-      <div className="absolute inset-0 z-0 bg-[#1E0A3C]">
+      <div className="absolute inset-0 z-[5] bg-[#1E0A3C] pointer-events-none">
         <Hyperspace />
         <Image
           src="/image/Cover.PNG"
           alt="Hero Background"
           fill
+          quality={100}
+          priority
+          sizes="1440px"
           className="object-cover object-center w-full h-full select-none pointer-events-none"
         />
         <div className="absolute inset-0 mix-blend-screen opacity-50 pointer-events-none">
@@ -187,38 +204,53 @@ export default function Heroes() {
           <CornerCube key={i} className={`${point.pos} pointer-events-none`} />
         ))}
 
-        <div className="flex flex-col items-center border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF] justify-center gap-6 p-[120px] relative overflow-hidden">
+        <div className="flex flex-col items-center border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF] justify-start gap-6 px-[120px] pt-[64px] pb-[120px] md:pt-[80px] min-h-[760px] md:min-h-[860px] lg:min-h-[920px] relative overflow-hidden">
           <div className="absolute inset-0 overflow-hidden pointer-events-none" />
 
           <div
-            className={`relative flex flex-col items-center justify-center transition-all duration-700 ease-out ${
+            className={`relative z-10 flex flex-col items-center justify-center transition-all duration-700 ease-out ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
-            <div className="relative flex flex-col items-center justify-center px-12 py-12 md:py-24 gap-4">
-              <div
-                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[150%] pointer-events-none -z-10"
-                style={{
-                  background:
-                    "radial-gradient(ellipse 60% 55% at 50% 45%, rgba(244,240,255,0.92) 0%, rgba(244,240,255,0.7) 35%, rgba(244,240,255,0.3) 60%, rgba(244,240,255,0) 80%)",
-                }}
-              />
-              <h1 className="font-bold text-[#221139] text-center text-[64px] md:text-[80px] lg:text-[120px] leading-none whitespace-nowrap drop-shadow-[0_2px_20px_rgba(244,240,255,0.6)]">
-                Garuda <br className="block md:hidden" /> Hacks 7.0
-              </h1>
-              <div className="flex flex-col items-center gap-0">
-                <p className="font-medium text-[#221139] text-[16px] md:text-[18px] text-center">
-                  July 24 - 26 | 2026 <br className="block md:hidden" /> at
-                  Universitas Multimedia Nusantara
-                </p>
-                <p className="font-medium text-[#221139] text-[16px] md:text-[18px] text-center">
-                  Be part of Indonesia's largest hackathon
-                </p>
+            <div className="relative flex flex-col items-center justify-center px-6 pt-4 pb-8 md:pt-6 md:pb-12 gap-5">
+              {/* reticle-framed title */}
+              <div className="relative px-7 py-6 md:px-12 md:py-9">
+                {/* corner ticks */}
+                <span className="absolute left-0 top-0 h-5 w-5 border-l-2 border-t-2 border-[#7CF5E9] md:h-7 md:w-7" />
+                <span className="absolute right-0 top-0 h-5 w-5 border-r-2 border-t-2 border-[#7CF5E9] md:h-7 md:w-7" />
+                <span className="absolute left-0 bottom-0 h-5 w-5 border-l-2 border-b-2 border-[#7CF5E9] md:h-7 md:w-7" />
+                <span className="absolute right-0 bottom-0 h-5 w-5 border-r-2 border-b-2 border-[#7CF5E9] md:h-7 md:w-7" />
+
+                <h1 className="font-mono font-bold text-[#EAE6FF] text-center text-[40px] md:text-[64px] lg:text-[80px] leading-none tracking-[0.02em] whitespace-nowrap drop-shadow-[0_0_18px_rgba(124,245,233,0.5)]">
+                  Garuda Hacks 7.0
+                </h1>
+
+                {/* inner date readout */}
+                <div className="mt-4 text-center font-mono text-[#7CF5E9] text-[10px] md:text-[13px] tracking-[0.2em] opacity-90">
+                  JUL 24–26 2026 · UMN
+                </div>
+              </div>
+
+              {/* terminal readout line with blinking cursor */}
+              <div className="font-mono text-[#C4B8F2] text-[12px] md:text-[15px] tracking-[0.12em]">
+                {"> Be part of Indonesia's largest hackathon"}
+                <span className="hud-cursor text-[#7CF5E9]">_</span>
+              </div>
+
+              {/* HUD eyebrow — moved below to free up top space */}
+              <div className="font-mono text-[#7CF5E9] text-[10px] md:text-[12px] tracking-[0.3em] drop-shadow-[0_0_8px_rgba(124,245,233,0.6)]">
+                {"// GH7.0 FLIGHT SYSTEM"}
+              </div>
+
+              {/* downward scroll-hint arrows */}
+              <div className="hud-arrows mt-1 flex flex-col items-center leading-[0.6] text-[#7CF5E9] text-[18px] md:text-[22px] drop-shadow-[0_0_8px_rgba(124,245,233,0.6)]">
+                <span>⌄</span>
+                <span>⌄</span>
               </div>
             </div>
 
             <div
-              className="z-20 relative flex flex-col items-center justify-center cursor-pointer mt-8 md:mt-12 group"
+              className="z-20 relative flex flex-col items-center justify-center cursor-pointer mt-20 md:mt-28 group"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
               onClick={() => setIsExpanded(true)}
