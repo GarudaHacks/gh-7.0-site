@@ -25,8 +25,9 @@ import SectionTeam from "@/sections/SectionTeam";
 export default function Home() {
   return (
     <div className="min-h-screen relative overflow-x-hidden">
-      
-      <style dangerouslySetInnerHTML={{__html: `
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
         @keyframes floatMascot {
           0% { transform: translateY(0px) rotate(0deg); }
           50% { transform: translateY(-15px) rotate(3deg); }
@@ -35,31 +36,31 @@ export default function Home() {
         .animate-float-mascot {
           animation: floatMascot 4s ease-in-out infinite;
         }
-      `}} />
+      `,
+        }}
+      />
 
       <Navbar />
       <Heroes />
       <Countdown />
-      <SpaceSection />
       <SectionAboutUs />
       <SectionTheme />
       <SectionTracks />
       <GarudaByTheNumbers />
-      <Sponsors/>
+      <Sponsors />
       {/* <SectionSpeakers /> */}
       <TBASpeakers />
       <TBAJudges />
-      {/* <SectionJudges /> */} 
+      {/* <SectionJudges /> */}
       <section id="projects">
-        <SectionProjectPast/>
+        <SectionProjectPast />
       </section>
-      
+
       <SectionRecaps />
       <SectionTeam />
-      
+
       <div className="relative w-full">
         <div className="absolute right-4 md:right-12 lg:right-[20px] -top-[80px] md:-top-[130px] z-[100] animate-float-mascot drop-shadow-[0_15px_15px_rgba(0,0,0,0.3)]">
-          
           <motion.div
             drag
             dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
@@ -70,7 +71,7 @@ export default function Home() {
           >
             <StickerPeel
               imageSrc="/image/ghq_garudie_mascot.png"
-              width={220} 
+              width={220}
               rotate={0}
               peelBackHoverPct={12}
               peelBackActivePct={20}
@@ -80,9 +81,8 @@ export default function Home() {
               peelDirection={0}
             />
           </motion.div>
-
         </div>
-        
+
         <Footer />
       </div>
     </div>

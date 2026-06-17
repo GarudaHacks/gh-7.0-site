@@ -108,7 +108,7 @@ function SpeakerModal({
       <div className="absolute inset-0 bg-[#221139]/40 backdrop-blur-md" />
 
       <div
-        className="relative z-10 bg-[#F9F5FF] border border-[#C4A9FF] rounded-2xl max-w-[520px] w-full p-6 md:p-8 shadow-lg shadow-[#C4A9FF]/50 animate-[gh-modal-in_0.22s_ease_both]"
+        className="relative z-10 bg-[#F9F5FF] border border-[#C4A9FF] rounded-2xl max-w-[520px] w-full p-6 md:p-8 shadow-lg active:shadow-lg shadow-[#C4A9FF]/50 active:shadow-[#C4A9FF]/50 animate-[gh-modal-in_0.22s_ease_both] active:animate-[gh-modal-in_0.22s_ease_both]"
         onClick={(e) => e.stopPropagation()}
         role="dialog"
         aria-modal="true"
@@ -163,22 +163,14 @@ export default function SectionSpeakers() {
     { pos: "-left-[-31px] -top-[10px] hidden lg:hidden xl:flex z-40" },
     { pos: "-right-[-31px] -top-[10px] hidden lg:hidden xl:flex" },
     // dott atas
-    {
-      pos: "left-[7px] -top-[10px] lg:left-[111px] lg:-top-[10px] xl:left-[153px] xl:-top-[10px]",
-    },
-    {
-      pos: "right-[7px] -top-[10px] lg:right-[111px] lg:-top-[10px] xl:right-[153px] xl:-top-[10px]",
-    },
+    { pos: "left-[7px] -top-[10px] lg:left-[111px] lg:-top-[10px] xl:left-[153px] xl:-top-[10px]" },
+    { pos: "right-[7px] -top-[10px] lg:right-[111px] lg:-top-[10px] xl:right-[153px] xl:-top-[10px]" },
     // dott bawah
     { pos: "-left-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
     { pos: "-right-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
     // dott bawah
-    {
-      pos: "left-[7px] -bottom-[10px] lg:left-[111px] lg:-bottom-[10px] xl:left-[153px] xl:-bottom-[10px]",
-    },
-    {
-      pos: "right-[7px] -bottom-[10px] lg:right-[111px] lg:-bottom-[10px] xl:right-[153px] xl:-bottom-[10px]",
-    },
+    { pos: "left-[7px] -bottom-[10px] lg:left-[111px] lg:-bottom-[10px] xl:left-[153px] xl:-bottom-[10px]" },
+    { pos: "right-[7px] -bottom-[10px] lg:right-[111px] lg:-bottom-[10px] xl:right-[153px] xl:-bottom-[10px]" },
   ];
 
   return (

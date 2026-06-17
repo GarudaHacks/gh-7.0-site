@@ -214,32 +214,32 @@ export default function Heroes() {
           >
             <div className="relative flex flex-col items-center justify-center px-6 pt-4 pb-8 md:pt-6 md:pb-12 gap-5">
               {/* reticle-framed title */}
-              <div className="relative px-7 py-6 md:px-12 md:py-9">
+              <div className="relative px-7 py-12 md:px-12 md:py-9">
                 {/* corner ticks */}
                 <span className="absolute left-0 top-0 h-5 w-5 border-l-2 border-t-2 border-[#7CF5E9] md:h-7 md:w-7" />
                 <span className="absolute right-0 top-0 h-5 w-5 border-r-2 border-t-2 border-[#7CF5E9] md:h-7 md:w-7" />
                 <span className="absolute left-0 bottom-0 h-5 w-5 border-l-2 border-b-2 border-[#7CF5E9] md:h-7 md:w-7" />
                 <span className="absolute right-0 bottom-0 h-5 w-5 border-r-2 border-b-2 border-[#7CF5E9] md:h-7 md:w-7" />
 
-                <h1 className="font-mono font-bold text-[#EAE6FF] text-center text-[40px] md:text-[64px] lg:text-[80px] leading-none tracking-[0.02em] whitespace-nowrap drop-shadow-[0_0_18px_rgba(124,245,233,0.5)]">
+                <h1 className="font-bold text-[#EAE6FF] text-center text-[32px] md:text-[40px] lg:text-[80px] leading-none tracking-[0.02em] whitespace-nowrap drop-shadow-[0_0_18px_rgba(124,245,233,0.5)]">
                   Garuda Hacks 7.0
                 </h1>
 
                 {/* inner date readout */}
-                <div className="mt-4 text-center font-mono text-[#7CF5E9] text-[10px] md:text-[13px] tracking-[0.2em] opacity-90">
+                <div className="mt-4 text-center font-mono text-[#7CF5E9] text-[16px] md:text-[18px] tracking-[0.2em] opacity-90">
                   July 16-18 2026 · UMN
                 </div>
               </div>
 
               {/* terminal readout line with blinking cursor */}
-              <div className="font-mono text-[#C4B8F2] text-[12px] md:text-[15px] tracking-[0.12em]">
+              <div className="font-mono text-[#C4B8F2] text-[14px] md:text-[18px] tracking-[0.12em] text-center">
                 {"> Be part of Indonesia's largest hackathon"}
                 <span className="hud-cursor text-[#7CF5E9]">_</span>
               </div>
 
               {/* HUD eyebrow — moved below to free up top space */}
-              <div className="font-mono text-[#7CF5E9] text-[10px] md:text-[12px] tracking-[0.3em] drop-shadow-[0_0_8px_rgba(124,245,233,0.6)]">
-                {"// GH7.0 FLIGHT SYSTEM"}
+              <div className="font-mono text-[#7CF5E9] text-[14px] md:text-[16px] tracking-[0.3em] drop-shadow-[0_0_8px_rgba(124,245,233,0.6)]">
+                {"GH7.0 FLIGHT SYSTEM"}
               </div>
 
               {/* downward scroll-hint arrows */}

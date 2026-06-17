@@ -4,11 +4,41 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { AboutData } from "@/data/data";
 import CountUp from "../components/CountUp";
 import { CardSpotlight } from "@/components/ui/card-spotlight";
+import CornerCube from "@/components/Cornercube";
 
 export default function SectionAboutUs() {
+  const points = [
+    // dott atas
+    { pos: "-left-[-31px] -top-[10px] hidden lg:hidden xl:flex z-40" },
+    { pos: "-right-[-31px] -top-[10px] hidden lg:hidden xl:flex" },
+
+    // dott atas
+    {
+      pos: "left-[7px] -top-[10px] lg:left-[111px] lg:-top-[10px] xl:left-[153px] xl:-top-[10px]",
+    },
+    {
+      pos: "right-[7px] -top-[10px] lg:right-[111px] lg:-top-[10px] xl:right-[153px] xl:-top-[10px]",
+    },
+
+    // dott bawah
+    { pos: "-left-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
+    { pos: "-right-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
+
+    // dott bawah
+    {
+      pos: "left-[7px] -bottom-[10px] lg:left-[111px] lg:-bottom-[10px] xl:left-[153px] xl:-bottom-[10px]",
+    },
+    {
+      pos: "right-[7px] -bottom-[10px] lg:right-[111px] lg:-bottom-[10px] xl:right-[153px] xl:-bottom-[10px]",
+    },
+  ];
+
   return (
     <section id="about" className="w-full relative border-b border-[#C4A9FF]">
       <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-t border-r-[#C4A9FF] border-l-[#C4A9FF]">
+        {points.map((point, i) => (
+          <CornerCube key={i} className={`${point.pos} pointer-events-none`} />
+        ))}
         <div className="px-4 md:px-12 py-16 md:py-[120px] border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF] flex flex-col gap-6 md:gap-8 items-start w-full">
           <div className="flex items-center justify-center px-4 py-2 w-full">
             <h2 className="flex-1 font-medium text-[#221139] text-2xl md:text-[48px] leading-snug text-center">
