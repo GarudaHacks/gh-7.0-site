@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import LaunchModal from "@/components/LaunchModal";
 
-function AmbientStars() {
+function Hyperspace() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -25,10 +25,7 @@ function AmbientStars() {
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
 
     type Star = { x: number; y: number; z: number; pz: number };
-
-    // Bintang dibikin dikit biar minimalis dan elegan
-    const isMobile = window.innerWidth < 768;
-    const STAR_COUNT = isMobile ? 60 : 120;
+    const STAR_COUNT = 320;
     const stars: Star[] = [];
 
     const resize = () => {
@@ -57,13 +54,12 @@ function AmbientStars() {
     }
 
     let raf = 0;
-    // Speed dilambatin banget biar feel-nya "cruising" santai
-    const speed = isMobile ? 1.5 : 2.5;
+    const speed = 14;
 
     const render = () => {
       ctx.clearRect(0, 0, w, h);
-      ctx.fillStyle = "#EAE6FF";
-      ctx.strokeStyle = "#EAE6FF";
+      ctx.fillStyle = "#C4A9FF";
+      ctx.strokeStyle = "#C4A9FF";
 
       for (const s of stars) {
         s.pz = s.z;
@@ -77,8 +73,8 @@ function AmbientStars() {
         const px = cx + (s.x / s.pz) * w;
         const py = cy + (s.y / s.pz) * w;
 
-        const size = (1 - s.z / w) * 1.5;
-        const alpha = Math.min(0.8, 1 - s.z / w); // Opacity diturunin biar subtle
+        const size = (1 - s.z / w) * 2.2;
+        const alpha = Math.min(1, (1 - s.z / w) * 1.2);
         ctx.globalAlpha = alpha;
         ctx.lineWidth = size;
         ctx.beginPath();
@@ -92,12 +88,12 @@ function AmbientStars() {
 
     const drawStatic = () => {
       ctx.clearRect(0, 0, w, h);
-      ctx.fillStyle = "#EAE6FF";
+      ctx.fillStyle = "#C4A9FF";
       for (const s of stars) {
         const sx = cx + (s.x / s.z) * w;
         const sy = cy + (s.y / s.z) * w;
-        const size = (1 - s.z / w) * 1.5;
-        ctx.globalAlpha = Math.min(0.8, 1 - s.z / w);
+        const size = (1 - s.z / w) * 2.2;
+        ctx.globalAlpha = Math.min(1, (1 - s.z / w) * 1.2);
         ctx.beginPath();
         ctx.arc(sx, sy, size, 0, Math.PI * 2);
         ctx.fill();
@@ -111,8 +107,11 @@ function AmbientStars() {
     };
     window.addEventListener("resize", onResize);
 
-    if (prefersReduced) drawStatic();
-    else raf = requestAnimationFrame(render);
+    if (prefersReduced) {
+      drawStatic();
+    } else {
+      raf = requestAnimationFrame(render);
+    }
 
     return () => {
       cancelAnimationFrame(raf);
@@ -135,12 +134,16 @@ export default function Heroes() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 50);
+    const timer = setTimeout(() => setIsVisible(true), 100);
     return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = isExpanded ? "hidden" : "";
+    if (isExpanded) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
     return () => {
       document.body.style.overflow = "";
     };
@@ -149,89 +152,105 @@ export default function Heroes() {
   const points = [
     { pos: "-left-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
     { pos: "-right-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
-    {
-      pos: "left-[7px] -bottom-[10px] lg:left-[111px] lg:-bottom-[10px] xl:left-[153px] xl:-bottom-[10px]",
-    },
-    {
-      pos: "right-[7px] -bottom-[10px] lg:right-[111px] lg:-bottom-[10px] xl:right-[153px] xl:-bottom-[10px]",
-    },
+    { pos: "left-[7px] -bottom-[10px] lg:left-[111px] lg:-bottom-[10px] xl:left-[153px] xl:-bottom-[10px]" },
+    { pos: "right-[7px] -bottom-[10px] lg:right-[111px] lg:-bottom-[10px] xl:right-[153px] xl:-bottom-[10px]"},
   ];
 
   return (
-    <section className="w-full relative border-b border-[#C4A9FF] bg-[#0D0518]">
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
+    <section className="w-full relative border-b border-[#C4A9FF]">
+      <style dangerouslySetInnerHTML={{__html: `
         @keyframes floatIdle {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-10px); }
+          0% { transform: translateY(0px); }
+          50% { transform: translateY(-8px); }
+          100% { transform: translateY(0px); }
         }
         .animate-float-idle {
-          animation: floatIdle 4s ease-in-out infinite;
+          animation: floatIdle 3s ease-in-out infinite;
         }
-        /* Efek scanline ala monitor retro/pesawat */
-        .scanlines {
-          background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1));
-          background-size: 100% 4px;
+        @keyframes hudBlink {
+          0%, 49% { opacity: 1; }
+          50%, 100% { opacity: 0; }
         }
-      `,
-        }}
-      />
+        .hud-cursor {
+          animation: hudBlink 1.1s steps(1) infinite;
+        }
+        @keyframes hudArrowBounce {
+          0%, 100% { transform: translateY(0); opacity: 0.55; }
+          50% { transform: translateY(5px); opacity: 1; }
+        }
+        .hud-arrows {
+          animation: hudArrowBounce 1.6s ease-in-out infinite;
+        }
+      `}} />
 
-      {/* Layer Background */}
-      <div className="absolute inset-0 z-[5] pointer-events-none overflow-hidden">
+      <div className="absolute inset-0 z-[5] bg-[#1E0A3C] pointer-events-none">
+        <Hyperspace />
         <Image
           src="/image/Cover.PNG"
           alt="Hero Background"
           fill
           quality={100}
           priority
-          sizes="100vw"
-          className="object-cover object-center w-full h-full select-none opacity-40 mix-blend-screen"
+          sizes="1440px"
+          className="object-cover object-center w-full h-full select-none pointer-events-none"
         />
-        <AmbientStars />
-        <div className="absolute inset-0 scanlines opacity-50" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0D0518] via-transparent to-transparent" />
+        <div className="absolute inset-0 mix-blend-screen opacity-50 pointer-events-none">
+          <Hyperspace />
+        </div>
       </div>
 
-      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-t border-r-[#C4A9FF] border-l-[#C4A9FF] relative z-10">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-t border-r-[#C4A9FF] border-l-[#C4A9FF]">
         {points.map((point, i) => (
           <CornerCube key={i} className={`${point.pos} pointer-events-none`} />
         ))}
 
-        <div className="flex flex-col items-center justify-center border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF] gap-6 px-4 py-20 min-h-[100svh] lg:min-h-[850px] relative">
+        <div className="flex flex-col items-center border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF] justify-start gap-6 px-[120px] pt-[64px] pb-[120px] md:pt-[80px] min-h-[760px] md:min-h-[860px] lg:min-h-[920px] relative overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none" />
+
           <div
-            className={`relative z-10 flex flex-col items-center justify-center transition-all duration-1000 ease-out w-full ${
-              isVisible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-8"
+            className={`relative z-10 flex flex-col items-center justify-center transition-all duration-700 ease-out ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
-            {/* Header / Text System */}
-            <div className="relative flex flex-col items-center justify-center text-center gap-4 w-full">
-              <div className="relative inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.15)] mb-2">
-                {/* Efek kilap/pantulan cahaya khas kaca (iOS detail) */}
-                <div className="absolute inset-0 rounded-full bg-gradient-to-b from-white/10 to-transparent pointer-events-none" />
+            <div className="relative flex flex-col items-center justify-center px-6 pt-4 pb-8 md:pt-6 md:pb-12 gap-5">
+              {/* reticle-framed title */}
+              <div className="relative px-7 py-6 md:px-12 md:py-9">
+                {/* corner ticks */}
+                <span className="absolute left-0 top-0 h-5 w-5 border-l-2 border-t-2 border-[#7CF5E9] md:h-7 md:w-7" />
+                <span className="absolute right-0 top-0 h-5 w-5 border-r-2 border-t-2 border-[#7CF5E9] md:h-7 md:w-7" />
+                <span className="absolute left-0 bottom-0 h-5 w-5 border-l-2 border-b-2 border-[#7CF5E9] md:h-7 md:w-7" />
+                <span className="absolute right-0 bottom-0 h-5 w-5 border-r-2 border-b-2 border-[#7CF5E9] md:h-7 md:w-7" />
 
-                {/* Teks Minimalis */}
-                <span className="relative z-10 font-sans font-medium text-white/90 text-[11px] sm:text-[13px] tracking-wide">
-                  ASEAN Largest Hackathon
-                </span>
+                <h1 className="font-mono font-bold text-[#EAE6FF] text-center text-[40px] md:text-[64px] lg:text-[80px] leading-none tracking-[0.02em] whitespace-nowrap drop-shadow-[0_0_18px_rgba(124,245,233,0.5)]">
+                  Garuda Hacks 7.0
+                </h1>
+
+                {/* inner date readout */}
+                <div className="mt-4 text-center font-mono text-[#7CF5E9] text-[10px] md:text-[13px] tracking-[0.2em] opacity-90">
+                  July 16-18 2026 · UMN
+                </div>
               </div>
 
-              <h1 className="font-mono font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-[#FFFFFF] to-[#C4A9FF] text-[12vw] sm:text-[48px] md:text-[64px] lg:text-[80px] leading-tight tracking-tight drop-shadow-lg px-2">
-                Garuda Hacks 7.0
-              </h1>
+              {/* terminal readout line with blinking cursor */}
+              <div className="font-mono text-[#C4B8F2] text-[12px] md:text-[15px] tracking-[0.12em]">
+                {"> Be part of Indonesia's largest hackathon"}
+                <span className="hud-cursor text-[#7CF5E9]">_</span>
+              </div>
 
-              <div className="font-mono text-[#EAE6FF] text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.2em]  mt-1">
-                July 16-18 2026 <span className="mx-3 text-[#C4A9FF]">|</span>{" "}
-                UMN
+              {/* HUD eyebrow — moved below to free up top space */}
+              <div className="font-mono text-[#7CF5E9] text-[10px] md:text-[12px] tracking-[0.3em] drop-shadow-[0_0_8px_rgba(124,245,233,0.6)]">
+                {"// GH7.0 FLIGHT SYSTEM"}
+              </div>
+
+              {/* downward scroll-hint arrows */}
+              <div className="hud-arrows mt-1 flex flex-col items-center leading-[0.6] text-[#7CF5E9] text-[18px] md:text-[22px] drop-shadow-[0_0_8px_rgba(124,245,233,0.6)]">
+                <span>⌄</span>
+                <span>⌄</span>
               </div>
             </div>
 
-            {/* Cockpit / CTA Area */}
             <div
-              className="z-20 relative flex flex-col items-center justify-center cursor-pointer mt-12 sm:mt-20 group w-full"
+              className="z-20 relative flex flex-col items-center justify-center cursor-pointer mt-20 md:mt-28 group"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
               onClick={() => setIsExpanded(true)}
@@ -240,42 +259,27 @@ export default function Heroes() {
               aria-label="Initialize Cockpit"
               onKeyDown={(e) => e.key === "Enter" && setIsExpanded(true)}
             >
-              {/* Glow Effect (Dipisahkan biar gambar utama tetep tajam) */}
               <div
-                className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70vw] max-w-[400px] h-[40vw] max-h-[250px] bg-[#874FFE] rounded-full blur-[80px] transition-all duration-700 pointer-events-none ${
-                  isHovered ? "opacity-80 scale-110" : "opacity-40 scale-100"
+                className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] md:w-[350px] h-[150px] md:h-[200px] bg-[#874FFE] rounded-[100%] blur-[60px] md:blur-[80px] transition-opacity duration-500 pointer-events-none ${
+                  isHovered ? "opacity-60" : "opacity-30"
                 }`}
               />
 
-              <div className="relative flex flex-col items-center animate-float-idle">
-                {/* Gambar Kokpit UHD. 
-                  Pakai tag img biasa tapi dihapus class mix-blend atau drop-shadow berlebihnya 
-                  biar pure nampilin vector aslinya. 
-                */}
+              <div className="relative animate-float-idle">
                 <img
                   src="/image/steering_1.svg"
                   alt="Launch Cockpit"
-                  className={`relative z-20 w-[85vw] max-w-[320px] md:max-w-[480px] h-auto pointer-events-none select-none transition-transform duration-500 ease-out ${
-                    isHovered
-                      ? "scale-105 drop-shadow-[0_15px_30px_rgba(135,79,254,0.5)]"
-                      : "scale-100 drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)]"
+                  className={`relative z-10 w-[340px] md:w-[460px] h-auto pointer-events-none select-none transition-all duration-500 ease-out ${
+                    isHovered ? "scale-105 drop-shadow-[0_0_25px_rgba(135,79,254,0.6)]" : "scale-100 drop-shadow-[0_10px_20px_rgba(34,17,57,0.4)]"
                   }`}
-                  // style={{ imageRendering: "high-quality" }}
                 />
-
-                {/* Button Initialize */}
-                <div
-                  className={`absolute -bottom-6 md:-bottom-10 flex items-center justify-center px-8 py-3.5 rounded-full bg-[#0D0518]/90 backdrop-blur-md border transition-all duration-300 z-30 ${
-                    isHovered
-                      ? "border-[#7CF5E9] shadow-[0_0_20px_rgba(124,245,233,0.4)] scale-110"
-                      : "border-[#874FFE]/60 shadow-lg text-[#EAE6FF]"
+                
+                <div 
+                  className={`absolute -bottom-6 md:-bottom-8 left-1/2 -translate-x-1/2 flex items-center justify-center px-6 py-2.5 rounded-full bg-[#1E0A3C]/80 backdrop-blur-sm border border-[#874FFE]/50 shadow-[0_0_15px_rgba(135,79,254,0.3)] transition-all duration-300 z-20 ${
+                    isHovered ? "scale-110 border-[#C4A9FF]" : "animate-pulse"
                   }`}
                 >
-                  <span
-                    className={`text-xs md:text-sm font-bold tracking-[0.15em] uppercase whitespace-nowrap transition-colors duration-300 ${
-                      isHovered ? "text-[#7CF5E9]" : "text-[#EAE6FF]"
-                    }`}
-                  >
+                  <span className="text-[13px] md:text-[15px] font-bold tracking-[0.15em] text-white uppercase whitespace-nowrap">
                     Initialize Launch
                   </span>
                 </div>

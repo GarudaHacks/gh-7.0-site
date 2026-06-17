@@ -20,6 +20,7 @@ import { motion } from "framer-motion";
 import Sponsors from "@/sections/SectionSponsors";
 import TBAJudges from "@/sections/TBA/TBAJudges";
 import TBASpeakers from "@/sections/TBA/TBASpeakers";
+import SectionTeam from "@/sections/SectionTeam";
 
 export default function Home() {
   return (
@@ -54,6 +55,7 @@ export default function Home() {
       </section>
       
       <SectionRecaps />
+      <SectionTeam />
       
       <div className="relative w-full">
         <div className="absolute right-4 md:right-12 lg:right-[20px] -top-[80px] md:-top-[130px] z-[100] animate-float-mascot drop-shadow-[0_15px_15px_rgba(0,0,0,0.3)]">
