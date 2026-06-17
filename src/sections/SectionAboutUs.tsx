@@ -49,7 +49,12 @@ export default function SectionAboutUs() {
                 <p className=" font-medium text-[#221139] text-sm md:text-[16px] text-justify leading-relaxed w-full">
                   {AboutData[1].description}
                 </p>
-                <button className="group relative overflow-hidden flex items-center gap-4 p-1 rounded-full shrink-0 mt-2 border border-[#C4A9FF] cursor-pointer">
+                <a
+                  href="https://portal.garudahacks.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative overflow-hidden flex items-center gap-4 p-1 rounded-full shrink-0 mt-2 border border-[#C4A9FF] cursor-pointer"
+                >
                   <div className="absolute inset-0 bg-[#874FFE] origin-top scale-y-0 group-hover:scale-y-100 transition-transform duration-500 ease-out" />
 
                   <span className="relative z-10 font-bold text-[16px] text-[#221139] group-hover:text-[#F9F5FF] px-4 py-1 whitespace-nowrap transition-colors duration-300">
@@ -62,7 +67,7 @@ export default function SectionAboutUs() {
                       strokeWidth={1.5}
                     />
                   </div>
-                </button>
+                </a>
               </div>
             </div>
           </div>
