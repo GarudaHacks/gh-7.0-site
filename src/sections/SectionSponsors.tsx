@@ -16,7 +16,6 @@ interface Sponsor {
 const defaultSponsors: Sponsor[] = [
   { name: "HMIF UMN", size: "Large", logoSrc: "/sponsors/UMN.PNG", href: "https://hmif.umn.ac.id" },
   { name: "Centong Biru Cafe", size: "Medium", logoSrc: "/sponsors/centong-biru.PNG", href: "https://www.instagram.com/centongbiru.cafe" },
-  { name: "Data Sorcerers", size: "Medium", logoSrc: "/sponsors/data-sorcerers.png", href: "https://www.data-sorcerers.com" },
   { name: "JAPFA", size: "Medium", logoSrc: "/sponsors/japfa.png", href: "https://www.japfacomfeed.co.id" },
   { name: "LG Sinarmas", size: "Medium", logoSrc: "/sponsors/LGSM.png", href: "https://www.lgsinarmas.com" },
   { name: "Build Club", size: "Small", logoSrc: "/sponsors/build-club.png", href: "https://buildclub.ai" },
