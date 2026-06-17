@@ -20,12 +20,12 @@ export default function Spacing1() {
   ];
 
   return (
-    <section className={`w-full border-b border-b-[#C4A9FF] relative`}>
-      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF]">
+    <section className={`w-full border-b border-b-[rgba(124,58,237,0.2)] relative`}>
+      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-r-[rgba(124,58,237,0.2)] border-l-[rgba(124,58,237,0.2)]">
         {points.map((point, i) => (
           <CornerCube key={i} className={`${point.pos} pointer-events-none`} />
         ))}
-        <div className=" border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF] grid grid-cols-1 items-center gap-4 md:grid-cols-3 p-4">
+        <div className=" border-r border-l border-r-[rgba(124,58,237,0.2)] border-l-[rgba(124,58,237,0.2)] grid grid-cols-1 items-center gap-4 md:grid-cols-3 p-4">
           <div></div>
         </div>
       </div>

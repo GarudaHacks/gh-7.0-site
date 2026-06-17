@@ -31,7 +31,7 @@ const footerLinks = [
 export default function Footer() {
   return (
     
-    <footer className="w-full bg-[#08031a] relative overflow-hidden text-white border-t border-[#C4A9FF]/20">
+    <footer className="w-full bg-[#0F1117] relative overflow-hidden text-white border-t border-[rgba(124,58,237,0.2)]">
       
     
       <div 
@@ -73,7 +73,7 @@ export default function Footer() {
               <p className="font-semibold text-lg text-white">
                 Next Generation of Builders.
               </p>
-              <p className="text-[#C4A9FF] mt-2 font-medium">
+              <p className="text-[#7CF5E9] mt-2 font-medium">
                 contact@garudahacks.com
               </p>
             </div>
@@ -107,7 +107,7 @@ export default function Footer() {
                   <a
                     key={link.label}
                     href={link.href}
-                    className="font-medium text-[15px] text-[#9b7ecb] hover:text-[#C4A9FF] hover:translate-x-1 transition-all w-fit"
+                    className="font-medium text-[15px] text-[#a0a0a0] hover:text-[#7CF5E9] hover:translate-x-1 transition-all w-fit"
                   >
                     {link.label}
                   </a>
@@ -119,7 +119,7 @@ export default function Footer() {
         </div>
 
         {/* ── BAGIAN BAWAH: COPYRIGHT & LEGAL ── */}
-        <div className="py-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[#9b7ecb] text-sm">
+        <div className="py-8 border-t border-[rgba(124,58,237,0.2)] flex flex-col md:flex-row justify-between items-center gap-4 text-[#a0a0a0] text-sm">
           <p className="text-center md:text-left leading-relaxed">
             © 2026 Garuda Hacks. All rights reserved.
           </p>

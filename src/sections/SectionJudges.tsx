@@ -25,19 +25,19 @@ export default function SectionJudges() {
   return (
     <section
       id="judges"
-      className="w-full relative border-b border-[#C4A9FF]"
+      className="w-full relative border-b border-[rgba(124,58,237,0.2)]"
     >
-      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-[#C4A9FF]">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-[rgba(124,58,237,0.2)]">
         {/* Render dots CornerCube */}
         {points.map((point, i) => (
           <CornerCube key={i} className={`${point.pos} pointer-events-none`} />
         ))}
         
-        <div className="pl-6 md:pl-0 py-14 md:py-[80px] flex flex-col gap-[14px] items-start w-full border-r border-l border-[#C4A9FF] overflow-hidden">
+        <div className="pl-6 md:pl-0 py-14 md:py-[80px] flex flex-col gap-[14px] items-start w-full border-r border-l border-[rgba(124,58,237,0.2)] overflow-hidden">
           
           {/* ===================== OFFLINE JUDGES ===================== */}
           <div className="flex items-center justify-center px-3 py-2 w-full mb-4">
-            <h2 className="flex-1 font-bold text-[#221139] text-[24px] md:text-[48px] leading-normal text-center">
+            <h2 className="flex-1 font-bold text-[#f8f9fa] text-[24px] md:text-[48px] leading-normal text-center">
               Meet The Offline Judges
             </h2>
           </div>
@@ -47,7 +47,7 @@ export default function SectionJudges() {
 
           {/* ===================== ONLINE JUDGES ===================== */}
           <div className="flex items-center justify-center px-3 py-2 w-full mb-4 mt-8 md:mt-12">
-            <h2 className="flex-1 font-bold text-[#221139] text-[24px] md:text-[48px] leading-normal text-center">
+            <h2 className="flex-1 font-bold text-[#f8f9fa] text-[24px] md:text-[48px] leading-normal text-center">
               Meet The Online Judges
             </h2>
           </div>

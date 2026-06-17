@@ -3,11 +3,11 @@ import Image from "next/image";
 
 export default function GarudaByTheNumbers() {
   return (
-    <section className="w-full border-b border-[#C4A9FF] relative">
-      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-x border-[#C4A9FF]">
-        <div className="py-[60px] md:py-[80px] lg:py-[120px] border-x border-[#C4A9FF]">
+    <section className="w-full border-b border-[rgba(124,58,237,0.2)] relative">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-x border-[rgba(124,58,237,0.2)]">
+        <div className="py-[60px] md:py-[80px] lg:py-[120px] border-x border-[rgba(124,58,237,0.2)]">
           <div className="grid grid-cols-1 items-center gap-4 md:grid-cols-3 p-12">
-            <h3 className="text-[#221139] md:col-span-3 text-center font-semibold text-[24px] md:text-[48px] lg:text-[48px]">
+            <h3 className="text-[#f8f9fa] md:col-span-3 text-center font-semibold text-[24px] md:text-[48px] lg:text-[48px]">
               Garuda Hacks by the numbers
             </h3>
           </div>
@@ -15,16 +15,16 @@ export default function GarudaByTheNumbers() {
             {byTheNumbers.map((item, index) => (
               <div
                 key={index}
-                className="relative flex flex-col justify-between min-h-[200px] border border-[#C4A9FF] rounded-[12px] p-6 bg-transparent backdrop-blur-sm group transition-all duration-300 hover:border-[#874FFE] active:border-[#874FFE] hover:shadow-lg active:shadow-lg hover:shadow-[#874FFE] active:shadow-[#874FFE] overflow-hidden"
+                className="relative flex flex-col justify-between min-h-[200px] border border-[rgba(124,58,237,0.2)] rounded-[12px] p-6 bg-transparent backdrop-blur-sm group transition-all duration-300 hover:border-[#874FFE] active:border-[#874FFE] hover:shadow-lg active:shadow-lg hover:shadow-[#874FFE] active:shadow-[#874FFE] overflow-hidden"
               >
                 <div className="relative z-10">
-                  <h3 className=" font-bold text-[72px] md:text-[84px] text-[#221139] leading-none tracking-tighter">
+                  <h3 className=" font-bold text-[72px] md:text-[84px] text-[#f8f9fa] leading-none tracking-tighter">
                     {item.number}
                   </h3>
                 </div>
 
                 <div className="relative z-10 mt-4">
-                  <p className="font-['Montserrat',sans-serif] font-semibold text-[18px] text-[#221139] leading-tight">
+                  <p className="font-['Montserrat',sans-serif] font-semibold text-[18px] text-[#f8f9fa] leading-tight">
                     {item.unit} <br />
                     <span className="font-medium opacity-70">
                       {item.description}

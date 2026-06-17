@@ -20,8 +20,8 @@ function CountdownBox({
 
   return (
     <div className="flex flex-col gap-1 items-center">
-      <div className="bg-transparent backdrop-blur-lg p-1 rounded-xl shadow-[#8036CB]">
-        <div className="bg-[#F9F5FF] flex items-center justify-center w-[58px] h-[58px] md:w-[120px] md:h-[120px] rounded-lg overflow-hidden">
+      <div className="bg-transparent backdrop-blur-lg p-1 rounded-xl shadow-[rgba(124,58,237,0.3)]">
+        <div className="bg-[#1a1a2e] border border-[rgba(124,58,237,0.3)] flex items-center justify-center w-[58px] h-[58px] md:w-[120px] md:h-[120px] rounded-lg overflow-hidden">
           <div className="flex">
             {digits.map((digit, index) => (
               <div
@@ -38,7 +38,7 @@ function CountdownBox({
                       duration: 0.4,
                       ease: [0.23, 1, 0.32, 1],
                     }}
-                    className="font-medium text-[#221139] text-[28px] md:text-[48px] lg:text-[64px] tracking-[-2px] leading-none inline-block"
+                    className="font-medium text-[#7CF5E9] text-[28px] md:text-[48px] lg:text-[64px] tracking-[-2px] leading-none inline-block"
                   >
                     {digit}
                   </motion.span>
@@ -50,7 +50,7 @@ function CountdownBox({
       </div>
 
       <div className="flex items-center justify-center px-2 py-1 rounded-xl">
-        <span className="font-semibold text-[#221139] text-[12px] md:text-[14px] lg:text-[16px]">
+        <span className="font-semibold text-[#a0a0a0] text-[12px] md:text-[14px] lg:text-[16px]">
           {label}
         </span>
       </div>
@@ -101,23 +101,23 @@ export default function CountdownSection() {
 
   if (!isMounted) {
     return (
-      <section className="border-b border-[#C4A9FF] relative opacity-0">
+      <section className="border-b border-[rgba(124,58,237,0.2)] relative opacity-0 bg-[#0F1117]">
         <div className="mx-auto max-w-[1440px] h-[150px]"></div>
       </section>
     );
   }
 
   return (
-    <section className="border-b border-[#C4A9FF] relative">
-      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF]">
-        <div className="flex-row border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF] flex items-center justify-center px-6 py-6 gap-1 md:gap-4">
+    <section className="border-b border-[rgba(124,58,237,0.2)] relative bg-[#0F1117]">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-r-[rgba(124,58,237,0.2)] border-l-[rgba(124,58,237,0.2)]">
+        <div className="flex-row border-r border-l border-r-[rgba(124,58,237,0.2)] border-l-[rgba(124,58,237,0.2)] flex items-center justify-center px-6 py-6 gap-1 md:gap-4">
           {units.map((unit, i) => (
             <div key={unit.label} className="flex items-center gap-1 md:gap-4">
               <CountdownBox value={unit.value} label={unit.label} />
               {i < units.length - 1 && (
                 <div className="flex flex-col gap-1 mb-6">
-                  <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[#C4A9FF] block" />
-                  <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[#C4A9FF] block" />
+                  <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[#7CF5E9] block" />
+                  <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[#7CF5E9] block" />
                 </div>
               )}
             </div>

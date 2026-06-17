@@ -33,7 +33,7 @@ function SpeakerCard({
       aria-label={`Open ${speaker.name} profile`}
     >
       <div className="relative w-full h-[339px] transition-transform duration-500 ease-in-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-        <div className="absolute inset-0 bg-[#F9F5FF] border border-[#C4A9FF] rounded-xl flex flex-col items-center overflow-hidden p-3 [backface-visibility:hidden]">
+        <div className="absolute inset-0 bg-[#1a1a2e] border border-[rgba(124,58,237,0.2)] rounded-xl flex flex-col items-center overflow-hidden p-3 [backface-visibility:hidden]">
           <div className="bg-[#C4A9FF] flex items-end justify-end w-full h-[248px] rounded-lg p-3 relative overflow-hidden">
             <img
               src={speaker.photo}
@@ -54,22 +54,22 @@ function SpeakerCard({
 
           <div className="flex flex-col items-center py-3 w-full">
             <div className="flex items-center w-full">
-              <p className="flex-1  font-medium text-[#221139] text-[18px] leading-normal break-words">
+              <p className="flex-1  font-medium text-[#f8f9fa] text-[18px] leading-normal break-words">
                 {speaker.name}
               </p>
             </div>
             <div className="flex items-center w-full">
-              <p className="flex-1  font-normal text-[#221139] text-[16px] leading-normal break-words">
+              <p className="flex-1  font-normal text-[#f8f9fa] text-[16px] leading-normal break-words">
                 {speaker.role}
               </p>
             </div>
           </div>
         </div>
 
-        <div className="absolute inset-0 bg-[#F9F5FF] border border-[#C4A9FF] rounded-xl flex flex-col items-center overflow-hidden p-3 [backface-visibility:hidden] [transform:rotateY(180deg)]">
+        <div className="absolute inset-0 bg-[#1a1a2e] border border-[rgba(124,58,237,0.2)] rounded-xl flex flex-col items-center overflow-hidden p-3 [backface-visibility:hidden] [transform:rotateY(180deg)]">
           <div className="flex flex-col items-center gap-2 w-full h-full">
             <div className="w-full">
-              <p className=" font-semibold text-[#221139] text-[18px] leading-normal w-full">
+              <p className=" font-semibold text-[#f8f9fa] text-[18px] leading-normal w-full">
                 {speaker.name}
               </p>
               <p className=" font-medium text-[#8E47D6] text-[16px] leading-normal w-full">
@@ -78,7 +78,7 @@ function SpeakerCard({
             </div>
 
             <div className="flex items-start w-full flex-1 overflow-hidden">
-              <p className=" font-normal text-[#221139] text-[16px] leading-snug break-words line-clamp-[8]">
+              <p className=" font-normal text-[#f8f9fa] text-[16px] leading-snug break-words line-clamp-[8]">
                 {speaker.bio}
               </p>
             </div>
@@ -108,7 +108,7 @@ function SpeakerModal({
       <div className="absolute inset-0 bg-[#221139]/40 backdrop-blur-md" />
 
       <div
-        className="relative z-10 bg-[#F9F5FF] border border-[#C4A9FF] rounded-2xl max-w-[520px] w-full p-6 md:p-8 shadow-lg shadow-[#C4A9FF]/50 animate-[gh-modal-in_0.22s_ease_both]"
+        className="relative z-10 bg-[#1a1a2e] border border-[rgba(124,58,237,0.2)] rounded-2xl max-w-[520px] w-full p-6 md:p-8 shadow-lg shadow-[#C4A9FF]/50 animate-[gh-modal-in_0.22s_ease_both]"
         onClick={(e) => e.stopPropagation()}
         role="dialog"
         aria-modal="true"
@@ -116,7 +116,7 @@ function SpeakerModal({
       >
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-[#221139] hover:text-[#67339C] transition-colors"
+          className="absolute top-4 right-4 text-[#f8f9fa] hover:text-[#67339C] transition-colors"
           aria-label="Close"
         >
           <XMarkIcon className="w-5 h-5" />
@@ -132,12 +132,12 @@ function SpeakerModal({
                 (e.target as HTMLImageElement).style.display = "none";
               }}
             />
-            {/* <span className="absolute inset-0 flex items-center justify-center  font-bold text-[#221139] text-2xl pointer-events-none">
+            {/* <span className="absolute inset-0 flex items-center justify-center  font-bold text-[#f8f9fa] text-2xl pointer-events-none">
               {speaker.name.charAt(0)}
             </span> */}
           </div>
           <div>
-            <h3 className="font-semibold text-[#221139] text-[20px] leading-normal">
+            <h3 className="font-semibold text-[#f8f9fa] text-[20px] leading-normal">
               {speaker.name}
             </h3>
             <p className="font-normal text-[#67339C] text-[15px] leading-normal">
@@ -147,7 +147,7 @@ function SpeakerModal({
         </div>
 
         <div className="w-full h-px bg-[#C4A9FF] mb-5" />
-        <div className="font-normal text-[#221139] text-[15px] leading-relaxed whitespace-pre-line">
+        <div className="font-normal text-[#f8f9fa] text-[15px] leading-relaxed whitespace-pre-line">
           {speaker.bio}
         </div>
       </div>
@@ -184,15 +184,15 @@ export default function SectionSpeakers() {
   return (
     <section
       id="speakers"
-      className="w-full relative border-b border-[#C4A9FF]"
+      className="w-full relative border-b border-[rgba(124,58,237,0.2)]"
     >
-      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-[#C4A9FF]">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-[rgba(124,58,237,0.2)]">
         {points.map((point, i) => (
           <CornerCube key={i} className={`${point.pos} pointer-events-none`} />
         ))}
-        <div className="pl-6 md:pl-0 py-14 md:py-[80px] flex flex-col gap-[14px] items-start w-full border-r border-l border-[#C4A9FF] overflow-hidden">
+        <div className="pl-6 md:pl-0 py-14 md:py-[80px] flex flex-col gap-[14px] items-start w-full border-r border-l border-[rgba(124,58,237,0.2)] overflow-hidden">
           <div className="flex items-center justify-center px-3 py-2 w-full">
-            <h2 className="flex-1 font-bold text-[#221139] text-[24px] md:text-[48px] leading-normal text-center">
+            <h2 className="flex-1 font-bold text-[#f8f9fa] text-[24px] md:text-[48px] leading-normal text-center">
               Speakers
             </h2>
           </div>

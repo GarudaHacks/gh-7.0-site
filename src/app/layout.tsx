@@ -23,9 +23,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full antialiased", "font-sans", geist.variable)}
+      className={cn("h-full antialiased bg-[#0F1117]", "font-sans", geist.variable)}
     >
-      <body className={`${montserrat.variable} font-sans min-h-full flex flex-col`}>{children}</body>
+      <body className={`${montserrat.variable} font-sans min-h-full flex flex-col bg-[#0F1117] text-[#f8f9fa]`}>{children}</body>
     </html>
   );
 }

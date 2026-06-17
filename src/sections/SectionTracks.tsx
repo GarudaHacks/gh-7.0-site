@@ -67,14 +67,14 @@ export default function Overview({
   return (
     <section
       id="tracks"
-      className={`w-full relative border-b border-[#C4A9FF] ${className}`}
+      className={`w-full relative border-b border-[rgba(124,58,237,0.2)] ${className}`}
     >
-      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-[#C4A9FF]">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-[rgba(124,58,237,0.2)]">
         {points.map((point, i) => (
           <CornerCube key={i} className={`${point.pos} pointer-events-none`} />
         ))}
 
-        <div className="flex flex-col md:flex-row items-start gap-8 md:gap-12 border-r border-l border-[#C4A9FF] px-4 md:px-12 py-16 md:py-[120px]">
+        <div className="flex flex-col md:flex-row items-start gap-8 md:gap-12 border-r border-l border-[rgba(124,58,237,0.2)] px-4 md:px-12 py-16 md:py-[120px]">
           <div className="flex flex-col gap-4 flex-1 w-full min-h-[400px] justify-center">
             <AnimatePresence mode="popLayout">
               {categories.map((cat, idx) => {
@@ -98,7 +98,7 @@ export default function Overview({
 
                         <div className="flex flex-col gap-2">
                           <p
-                            className={`font-medium text-[#221139] text-[16px] text-justify leading-relaxed transition-all duration-300 `}
+                            className={`font-medium text-[#f8f9fa] text-[16px] text-justify leading-relaxed transition-all duration-300 `}
                             // ${
                             //   isExpanded ? "" : "line-clamp-3"
                             // }
@@ -108,7 +108,7 @@ export default function Overview({
 
                           {/* <button 
                             onClick={() => setIsExpanded(!isExpanded)}
-                            className="text-left text-[15px] font-bold text-[#874FFE] hover:text-[#221139] transition-colors w-fit"
+                            className="text-left text-[15px] font-bold text-[#874FFE] hover:text-[#f8f9fa] transition-colors w-fit"
                           >
                             {isExpanded ? "Show Less" : "See More..."}
                           </button> */}
@@ -124,10 +124,10 @@ export default function Overview({
                     ) : (
                       <button
                         onClick={() => handleCategoryChange(idx)}
-                        className="w-full group flex items-center justify-between rounded-xl border border-[#C4A9FF] p-4 text-[16px] md:text-[16px] font-medium text-[#221139] hover:bg-[#874FFE] hover:text-[#F9F5FF] transition-all text-left"
+                        className="w-full group flex items-center justify-between rounded-xl border border-[rgba(124,58,237,0.2)] p-4 text-[16px] md:text-[16px] font-medium text-[#f8f9fa] hover:bg-[#874FFE] hover:text-[#F9F5FF] transition-all text-left"
                       >
                         <span>{cat.label}</span>
-                        <ArrowRightIcon className="h-5 w-5 text-[#221139] group-hover:text-[#F9F5FF] transition-colors" />
+                        <ArrowRightIcon className="h-5 w-5 text-[#f8f9fa] group-hover:text-[#F9F5FF] transition-colors" />
                       </button>
                     )}
                   </motion.div>
@@ -137,7 +137,7 @@ export default function Overview({
           </div>
 
           <div className="w-full md:w-[48%] shrink-0 order-first md:order-0">
-            <div className="w-full rounded-xl overflow-hidden border border-[#C4A9FF] bg-[#F9F5FF] aspect-[4/3] flex items-center justify-center relative shadow-sm">
+            <div className="w-full rounded-xl overflow-hidden border border-[rgba(124,58,237,0.2)] bg-[#1a1a2e] aspect-[4/3] flex items-center justify-center relative shadow-sm">
               <AnimatePresence mode="wait">
                 {activeImage && (
                   <motion.img

@@ -157,7 +157,7 @@ export default function Heroes() {
   ];
 
   return (
-    <section className="w-full relative border-b border-[#C4A9FF]">
+    <section className="w-full relative border-b border-[rgba(124,58,237,0.2)]">
       <style dangerouslySetInnerHTML={{__html: `
         @keyframes floatIdle {
           0% { transform: translateY(0px); }
@@ -199,12 +199,12 @@ export default function Heroes() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-t border-r-[#C4A9FF] border-l-[#C4A9FF]">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-t border-r-[rgba(124,58,237,0.2)] border-l-[rgba(124,58,237,0.2)]">
         {points.map((point, i) => (
           <CornerCube key={i} className={`${point.pos} pointer-events-none`} />
         ))}
 
-        <div className="flex flex-col items-center border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF] justify-start gap-6 px-[120px] pt-[64px] pb-[120px] md:pt-[80px] min-h-[760px] md:min-h-[860px] lg:min-h-[920px] relative overflow-hidden">
+        <div className="flex flex-col items-center border-r border-l border-r-[rgba(124,58,237,0.2)] border-l-[rgba(124,58,237,0.2)] justify-start gap-6 px-[120px] pt-[64px] pb-[120px] md:pt-[80px] min-h-[760px] md:min-h-[860px] lg:min-h-[920px] relative overflow-hidden">
           <div className="absolute inset-0 overflow-hidden pointer-events-none" />
 
           <div
@@ -276,7 +276,7 @@ export default function Heroes() {
                 
                 <div 
                   className={`absolute -bottom-6 md:-bottom-8 left-1/2 -translate-x-1/2 flex items-center justify-center px-6 py-2.5 rounded-full bg-[#1E0A3C]/80 backdrop-blur-sm border border-[#874FFE]/50 shadow-[0_0_15px_rgba(135,79,254,0.3)] transition-all duration-300 z-20 ${
-                    isHovered ? "scale-110 border-[#C4A9FF]" : "animate-pulse"
+                    isHovered ? "scale-110 border-[rgba(124,58,237,0.2)]" : "animate-pulse"
                   }`}
                 >
                   <span className="text-[13px] md:text-[15px] font-bold tracking-[0.15em] text-white uppercase whitespace-nowrap">

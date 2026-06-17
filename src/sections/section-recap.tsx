@@ -397,7 +397,7 @@ const BentoCard = ({
 }) => (
   <li
     className={cn(
-      "relative list-none rounded-2xl border border-[#C4A9FF] overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300",
+      "relative list-none rounded-2xl border border-[rgba(124,58,237,0.2)] overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300",
       "md:rounded-3xl",
       className,
     )}
@@ -428,21 +428,21 @@ export default function SectionRecaps() {
   return (
     <section
       id="recap"
-      className="w-full relative border-b border-[#C4A9FF] bg-white"
+      className="w-full relative border-b border-[rgba(124,58,237,0.2)] bg-white"
     >
-      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-[#C4A9FF]">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-[rgba(124,58,237,0.2)]">
         {/* Corner dots */}
         {cornerDots.map((dot, i) => (
           <CornerCube key={i} className={`${dot.pos} pointer-events-none`} />
         ))}
 
         {/* Inner padded area */}
-        <div className="py-14 md:py-[80px] flex flex-col gap-10 w-full border-r border-l border-[#C4A9FF] px-4 md:px-12">
+        <div className="py-14 md:py-[80px] flex flex-col gap-10 w-full border-r border-l border-[rgba(124,58,237,0.2)] px-4 md:px-12">
           <div className="flex flex-col items-center gap-3 text-center mb-2">
             <span className="text-[#874FFE] text-xs font-bold tracking-[0.2em] uppercase">
               Garuda Hacks 6.0
             </span>
-            <h2 className="text-[#221139] font-extrabold text-3xl md:text-4xl tracking-tight">
+            <h2 className="text-[#f8f9fa] font-extrabold text-3xl md:text-4xl tracking-tight">
               Recap
             </h2>
             <p className="text-[#5b4a7a] text-[16px] md:text-base max-w-md leading-relaxed font-medium">
@@ -470,7 +470,7 @@ export default function SectionRecaps() {
                     <img
                       src={heroImage}
                       alt="GarudaHacks 6.0 main event"
-                      className="w-full h-[280px] md:h-[340px] object-cover rounded-xl border border-[#C4A9FF]/30 shadow-2xl"
+                      className="w-full h-[280px] md:h-[340px] object-cover rounded-xl border border-[rgba(124,58,237,0.2)]/30 shadow-2xl"
                     />
                   </Lens>
                 </div>
@@ -507,7 +507,7 @@ export default function SectionRecaps() {
                 <div className="grid grid-cols-2 gap-y-5 gap-x-3">
                   {stats.map(({ value, label }) => (
                     <div key={label} className="flex flex-col gap-0.5">
-                      <span className="text-[#221139] text-2xl md:text-3xl font-extrabold tracking-tight">
+                      <span className="text-[#f8f9fa] text-2xl md:text-3xl font-extrabold tracking-tight">
                         {value}
                       </span>
                       <span className="text-[#67339C] text-xs leading-tight font-medium">
@@ -521,14 +521,14 @@ export default function SectionRecaps() {
 
             <BentoCard
               className="md:col-span-5 md:row-span-1"
-              innerClassName="bg-[#F9F5FF]"
+              innerClassName="bg-[#1a1a2e]"
             >
               <div className="p-4 h-full flex flex-col justify-center">
                 <div className="grid grid-cols-2 gap-3 h-full">
                   {galleryImages.map((img, i) => (
                     <div
                       key={i}
-                      className="relative rounded-lg overflow-hidden bg-[#EAE5F4] aspect-square border border-[#C4A9FF]/50"
+                      className="relative rounded-lg overflow-hidden bg-[#EAE5F4] aspect-square border border-[rgba(124,58,237,0.2)]/50"
                     >
                       <img
                         src={img.src}

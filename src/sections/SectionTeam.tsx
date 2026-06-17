@@ -76,12 +76,12 @@ function TrainUnit() {
 
 export default function SectionTeam() {
   return (
-    <section className="w-full relative border-b border-[#C4A9FF]">
-      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-x border-[#C4A9FF]">
-        <div className="border-x border-[#C4A9FF] py-[60px] md:py-[80px] lg:py-[120px]">
+    <section className="w-full relative border-b border-[rgba(124,58,237,0.2)]">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-x border-[rgba(124,58,237,0.2)]">
+        <div className="border-x border-[rgba(124,58,237,0.2)] py-[60px] md:py-[80px] lg:py-[120px]">
           {/* heading */}
           <div className="px-4 md:px-12">
-            <h2 className="font-semibold text-[#221139] text-[24px] md:text-[40px] lg:text-[48px] leading-[1.1]">
+            <h2 className="font-semibold text-[#f8f9fa] text-[24px] md:text-[40px] lg:text-[48px] leading-[1.1]">
               Meet The <br className="hidden md:block" />
               GH 7.0 Team
             </h2>

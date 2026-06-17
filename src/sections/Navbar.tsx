@@ -38,23 +38,23 @@ export default function Navbar({ className = "" }: { className?: string }) {
   return (
     <>
       <nav
-        className={`bg-[#F9F5FF] w-full border-b border-[#C4A9FF] top-0 right-0 z-[100] fixed ${className}`}
+        className={`bg-[#1a1a2e]/80 backdrop-blur-md w-full border-b border-[rgba(124,58,237,0.2)] top-0 right-0 z-[100] fixed ${className}`}
       >
-        <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-x border-[#C4A9FF]">
+        <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-x border-[rgba(124,58,237,0.2)]">
           {points.map((point, i) => (
             <CornerCube
               key={i}
               className={`${point.pos} pointer-events-none`}
             />
           ))}
-          <div className="flex items-center justify-between py-3 px-6 bg-[#F9F5FF] border-x border-[#C4A9FF] relative">
+          <div className="flex items-center justify-between py-3 px-6 bg-transparent border-x border-[rgba(124,58,237,0.2)] relative">
             <div className="flex items-center h-8 shrink-0">
               <Image
                 src="/image/GambarLogoGarudaHitam.png"
                 alt="Garuda Hacks Logo"
                 width={150}
                 height={50}
-                className="h-full w-auto object-contain"
+                className="h-full w-auto object-contain brightness-200"
                 priority
               />
             </div>
@@ -64,7 +64,7 @@ export default function Navbar({ className = "" }: { className?: string }) {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="px-3 py-2 font-medium text-center text-[#221139] text-[16px] hover:text-[#8E47D6] transition-colors whitespace-nowrap"
+                  className="px-3 py-2 font-medium text-center text-[#a0a0a0] text-[16px] hover:text-[#7CF5E9] transition-colors whitespace-nowrap"
                 >
                   {link.label}
                 </a>
@@ -76,7 +76,7 @@ export default function Navbar({ className = "" }: { className?: string }) {
                 href="https://portal.garudahacks.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="cursor-pointer rounded-[6px] border border-[#7c3aed] bg-[#8e47d6] text-white px-8 py-3 transition-all duration-200 ease-out [box-shadow:inset_0_-1.5px_1px_#8e47d6,inset_0_-6px_1px_#712cb6] hover:translate-y-[1px] hover:[box-shadow:inset_0_4px_4px_#67339c]"
+                className="cursor-pointer rounded-[6px] border border-[#7c3aed] bg-[#7c3aed] text-[#f8f9fa] px-8 py-3 transition-all duration-200 ease-out hover:bg-[#874FFE] hover:border-[#874FFE] hover:shadow-[0_0_20px_rgba(124,58,237,0.4)]"
               >
                 Apply Now
               </a>
@@ -84,7 +84,7 @@ export default function Navbar({ className = "" }: { className?: string }) {
 
             <button
               type="button"
-              className="md:hidden p-2 text-[#221139]"
+              className="md:hidden p-2 text-[#f8f9fa]"
               onClick={(e) => {
                 e.stopPropagation();
                 setMobileOpen(!mobileOpen);
@@ -102,7 +102,7 @@ export default function Navbar({ className = "" }: { className?: string }) {
 
       <div
         onClick={() => setMobileOpen(false)}
-        className={`md:hidden fixed inset-0 z-[105] bg-black/20 backdrop-blur-[2px] transition-opacity duration-300 ${
+        className={`md:hidden fixed inset-0 z-[105] bg-black/40 backdrop-blur-[2px] transition-opacity duration-300 ${
           mobileOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
@@ -110,12 +110,12 @@ export default function Navbar({ className = "" }: { className?: string }) {
       />
 
       <div
-        className={`md:hidden fixed bottom-0 left-0 right-0 z-[110] bg-[#F9F5FF] border-t border-[#C4A9FF] rounded-t-[12px] shadow-2xl transition-transform duration-300 ease-out px-6 py-2 ${
+        className={`md:hidden fixed bottom-0 left-0 right-0 z-[110] bg-[#1a1a2e] border-t border-[rgba(124,58,237,0.2)] rounded-t-[12px] shadow-2xl transition-transform duration-300 ease-out px-6 py-2 ${
           mobileOpen ? "translate-y-0" : "translate-y-full"
         }`}
       >
         <div className="flex justify-center mb-2 p-2">
-          <div className="w-18 h-1.5 rounded-full bg-[#C4A9FF]" />
+          <div className="w-18 h-1.5 rounded-full bg-[rgba(124,58,237,0.4)]" />
         </div>
 
         <div className="flex flex-col gap-2">
@@ -124,7 +124,7 @@ export default function Navbar({ className = "" }: { className?: string }) {
               key={link.label}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="px-4 py-4 font-medium text-center text-[#221139] text-[16px] border-b border-[#C4A9FF]/40 active:bg-purple-50 transition-colors"
+              className="px-4 py-4 font-medium text-center text-[#a0a0a0] text-[16px] border-b border-[rgba(124,58,237,0.2)] active:bg-[rgba(124,58,237,0.1)] transition-colors"
             >
               {link.label}
             </a>
@@ -132,7 +132,7 @@ export default function Navbar({ className = "" }: { className?: string }) {
           <a
             href="#apply"
             onClick={() => setMobileOpen(false)}
-            className="btn-bold font-medium rounded-[6px] border border-[#7c3aed] bg-[#8e47d6] text-[16px] h-12 hover:bg-[#8036CB] text-white transition-colors text-center shadow-lg shadow-purple-200 mt-2"
+            className="font-medium rounded-[6px] border border-[#7c3aed] bg-[#7c3aed] text-[16px] h-12 hover:bg-[#874FFE] text-[#f8f9fa] transition-colors text-center shadow-lg shadow-[rgba(124,58,237,0.3)] mt-2"
           >
             <p className="text-lg mt-2"> Apply Now</p>
           </a>
