@@ -20,21 +20,21 @@ const speaker = [
       name: "To be announced",
       role: "Garuda Hacks Speaker",
       photo: "/image/PFP.png",
-      bio: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      bio: "Check out our Instagram for updates on our speakers! @garudahacks",
     },
     {
       id: 2,
       name: "To be announced",
       role: "Garuda Hacks Speaker",
       photo: "/image/PFP.png",
-      bio: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      bio: "Check out our Instagram for updates on our speakers! @garudahacks",
     },
     {
       id: 3,
       name: "To be announced",
       role: "Garuda Hacks Speaker",
       photo: "/image/PFP.png",
-      bio: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      bio: "Check out our Instagram for updates on our speakers! @garudahacks",
     },
   ];
 

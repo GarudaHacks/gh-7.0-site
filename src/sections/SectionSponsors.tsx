@@ -82,8 +82,7 @@ export default function Sponsors({
   className = "",
   sponsors = defaultSponsors,
   title = "Our Sponsors",
-  description = "Terima kasih kepada para sponsor yang telah mendukung dan menjadi bagian dari perjalanan kami.",
-  // 2. Small tier = 7 biar Advan ikut satu baris sama yang lain di desktop
+  description = "Thank you to our beloved sponsors for supporting the event and making it possible.",
   rowsPerTier = [3, 4, 7],
 }: SponsorsProps) {
   const tiers: Tier[] = (["Large", "Medium", "Small"] as SponsorSize[])

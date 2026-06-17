@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 
 interface InstructionProps {
   onBack: () => void;
@@ -41,7 +42,7 @@ const steps = [
   },
   {
     title: "Hack & Build",
-    desc: "You have exactly 48 hours. Drink your coffee, write clean code, and turn your wild ideas into working prototypes.",
+    desc: "You have exactly 30 hours. Drink your coffee, write clean code, and turn your wild ideas into working prototypes.",
     icon: <PlanetRing />
   },
   {
@@ -143,10 +144,14 @@ export default function InstructionFlow({ onBack, onRegister }: InstructionProps
         </div>
       ) : (
         <div className="flex flex-col items-center justify-center animate-[fadeIn_0.8s_ease-out] py-10">
-          <div className="w-28 h-28 rounded-full bg-gradient-to-tr from-[#874FFE] to-[#C4A9FF] flex items-center justify-center shadow-[0_0_50px_#874FFE] mb-8 animate-pulse">
-            <svg className="w-12 h-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
+          <div className="w-28 h-28 md:w-32 md:h-32 rounded-full bg-gradient-to-tr from-[#874FFE]/20 to-[#C4A9FF]/20 backdrop-blur-sm border border-[#C4A9FF]/30 flex items-center justify-center shadow-[0_0_50px_rgba(135,79,254,0.4)] mb-8 animate-[pulse_3s_ease-in-out_infinite] relative p-4">
+            <Image
+              src="/image/ghq_garudie_mascot.png" 
+              alt="Garuda Hacks Logo"
+              width={80}
+              height={80}
+              className="object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]"
+            />
           </div>
           <h2 className="text-4xl md:text-6xl font-black text-white tracking-tight mb-4">Are You Ready?</h2>
           <p className="text-[#C4A9FF] mb-10 max-w-lg text-center text-lg">

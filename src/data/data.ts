@@ -143,21 +143,21 @@ export const speaker = [
     name: "Sarah Fajri",
     role: "Project Manager at Deloitte",
     photo: "/image/sarah.png",
-    bio: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    bio: "Check out our Instagram @garudahacks.",
   },
   {
     id: 2,
     name: "Budi Santoso",
     role: "CTO at Gojek",
     photo: "/image/sarah.png",
-    bio: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    bio: "Check out our Instagram @garudahacks.",
   },
   {
     id: 3,
     name: "Rina Putri",
     role: "AI Researcher at Google",
     photo: "/image/sarah.png",
-    bio: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    bio: "Check out our Instagram @garudahacks.",
   },
 ];
 
@@ -170,7 +170,7 @@ export const projects = [
     image:
       "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/540/627/datas/original.jpg",
     link: "https://devpost.com/software/hijaukita?_gl=1*o9r3wd*_gcl_au*ODk2NDczMTI1LjE3MzYxOTI1MzM.*_ga*MTA1ODc5ODQxNy4xNzE1ODY5MjU1*_ga_0YHJK3Y10M*MTc0MzgzMDA4MC4yNi4xLjE3NDM4MzAxODkuMC4wLjA.",
-    teamName: "team name",
+    teamName: "Devpost",
   },
   {
     title: "Aspiring AI",
@@ -180,7 +180,7 @@ export const projects = [
     image:
       "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/540/256/datas/original.jpg",
     link: "https://devpost.com/software/p-lbraso?_gl=1*8furrd*_gcl_au*ODk2NDczMTI1LjE3MzYxOTI1MzM.*_ga*MTA1ODc5ODQxNy4xNzE1ODY5MjU1*_ga_0YHJK3Y10M*MTc0MzgzMDA4MC4yNi4xLjE3NDM4MzA2NTAuMC4wLjA.",
-    teamName: "team name",
+    teamName: "Devpost",
   },
   {
     title: "Jendela",
@@ -190,7 +190,7 @@ export const projects = [
     image:
       "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/950/263/datas/original.png",
     link: "https://devpost.com/software/jendela?_gl=1*837o5i*_gcl_au*ODk2NDczMTI1LjE3MzYxOTI1MzM.*_ga*MTA1ODc5ODQxNy4xNzE1ODY5MjU1*_ga_0YHJK3Y10M*MTc0MzgzMDA4MC4yNi4xLjE3NDM4MzA2NTEuMC4wLjA.",
-    teamName: "team name",
+    teamName: "Devpost",
   },
   {
     title: "JalanKami",
@@ -200,7 +200,7 @@ export const projects = [
     image:
       "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/949/694/datas/original.png",
     link: "https://devpost.com/software/jalankami",
-    teamName: "team name",
+    teamName: "Devpost",
   },
   {
     title: "IRiS",
@@ -210,7 +210,7 @@ export const projects = [
     image:
       "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/950/385/datas/original.png",
     link: "https://devpost.com/software/iris-fprvg9?_gl=1*1cfsuv2*_gcl_au*MTY0MTk2NDAyMi4xNzQyNDQ3NTU2*_ga*MTQzNzAyNDA1LjE3NDI0NDc1NTY.*_ga_0YHJK3Y10M*MTc0NDM1NTg0Ni4yLjEuMTc0NDM1NTg1MC4wLjAuMA..",
-    teamName: "team name",
+    teamName: "Devpost",
   },
 ];
 
@@ -374,23 +374,23 @@ export const categorys = [
     description:
       "Health is more than just access to hospitals. It includes prevention, mental well-being, nutrition, environment, and community support. In Indonesia, disparities persist between urban and rural populations, with challenges in healthcare access, health literacy, affordability, and cultural attitudes toward wellbeing. At the same time, lifestyle-related diseases and mental health issues are rising, especially among younger populations.",
     learnMore: "#",
-    // Gambar: Dokter/Tenaga Medis sedang mengecek data via tablet digital (Health Tech vibe)
-    image: "https://images.unsplash.com/photo-1532938911079-1b06ac7ce222?auto=format&fit=crop&w=800&q=80",
+   
+    image: "/tracks/health.avif",
   },
   {
     label: "Safety",
     description:
       "Safety is a fundamental need for individuals and communities to thrive. In Indonesia, people face a wide range of risks, from natural disasters such as earthquakes or floods to rising concerns about crime, public safety, and even economic instability. Many communities lack timely access to accurate information, coordinated response systems, and recovery resources.",
     learnMore: "#",
-    // Gambar: Helikopter rescue / tim SAR lagi bertugas (Disaster Response & Safety vibe)
-    image: "https://images.unsplash.com/photo-1502318217862-aa4e294ba654?auto=format&fit=crop&w=800&q=80",
+    
+    image: "/tracks/safety.avif",
   },
   {
     label: "Agriculture & Food Systems",
     description:
       "As an archipelago with vast fertile lands and rich seas, Indonesia is naturally an agrarian and maritime powerhouse. However, our farmers and fishers, the backbone of Indonesia’s food security, remain among the most economically vulnerable citizens. They often face significant hurdles, including aging infrastructure, volatile market prices, and the growing impact of climate change on crop yields and fish stocks.",
     learnMore: "#",
-    // Gambar: Lahan agrikultur modern atau penggunaan traktor/drone di lahan hijau (Agritech vibe)
-    image: "https://images.unsplash.com/photo-1586771107445-d3af2e8c2538?auto=format&fit=crop&w=800&q=80",
+    
+    image: "/tracks/food.avif",
   },
 ];
