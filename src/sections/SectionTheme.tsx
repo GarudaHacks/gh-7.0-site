@@ -124,7 +124,7 @@ export default function SectionTheme() {
             </div>
 
             <div className="flex flex-col items-center w-full">
-              <div className="flex flex-col gap-4 items-center justify-center w-full px-4 md:px-[54px] py-0.5">
+              <div className="flex flex-col gap-4 items-center justify-center w-full px-0 md:px-[54px] py-0.5">
                 <p className="font-medium text-[#221139] text-lg md:text-[24px] leading-normal text-center min-w-full">
                   Garuda Hacks 7.0
                 </p>
@@ -141,7 +141,7 @@ export default function SectionTheme() {
                     </span>
                   </div>
                   {/* terminal body */}
-                  <div className="px-4 py-4 md:px-5 md:py-5 text-left font-mono text-[13px] md:text-[14px] leading-relaxed text-[#D8CEF0]">
+                  <div className="px-4 py-4 md:px-5 md:py-5 text-left font-mono text-[16px] md:text-[16px] leading-relaxed text-[#D8CEF0]">
                     {/* first paragraph — always shown */}
                     <p>
                       <span className="text-[#8B5CF6]">{"> "}</span>

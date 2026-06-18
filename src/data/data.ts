@@ -40,17 +40,17 @@ export type TeamMember = {
   name: string;
   photo: string;
 };
- 
+
 export const managingDirectors: TeamMember[] = [
   { name: "Dominic Moreno", photo: "dom.jpg" },
   { name: "Ralph Benedict", photo: "ben.jpg" },
 ];
- 
+
 export type TeamGroup = {
   team: string;
   members: TeamMember[];
 };
- 
+
 export const teamGroups: TeamGroup[] = [
   {
     team: "Marketing & Design",
@@ -73,14 +73,13 @@ export const teamGroups: TeamGroup[] = [
       { name: "Topan Prasetyo", photo: "topan.jpeg" },
       { name: "Luminous Insani", photo: "luminous.jpg" },
       { name: "Khalila Kalla", photo: "khalila.JPG" },
-      { name: "Yoggy Yancandra", photo: "yoggy.jpg"},
     ],
   },
   {
     team: "Logistics",
     members: [
       { name: "Emily Jade", photo: "emily.jpeg" },
-      { name: "Putra Pratama", photo: "putra.JPG" },
+      { name: "Putra Pratama", photo: "putra.jpg" },
       { name: "Josephine Yuwono", photo: "josephine.jpg" },
       { name: "Adrianna Isanto", photo: "adrianna.jpeg" },
       { name: "Lyan Callista", photo: "lyan.jpg" },
@@ -324,7 +323,7 @@ export const offlineJudges = [
     name: "Timotius Haniel",
     designation: "Judge",
     src: "/offline/Timotius Haniel.jpeg",
-  }
+  },
 ];
 
 export const onlineJudges = [
@@ -363,10 +362,8 @@ export const onlineJudges = [
     name: "Wily Goldramijaya",
     designation: "Judge",
     src: "/online/Wily Goldramijaya.jpeg",
-  }
+  },
 ];
-
-
 
 export const categorys = [
   {
@@ -374,7 +371,7 @@ export const categorys = [
     description:
       "Health is more than just access to hospitals. It includes prevention, mental well-being, nutrition, environment, and community support. In Indonesia, disparities persist between urban and rural populations, with challenges in healthcare access, health literacy, affordability, and cultural attitudes toward wellbeing. At the same time, lifestyle-related diseases and mental health issues are rising, especially among younger populations.",
     learnMore: "#",
-   
+
     image: "/tracks/health.avif",
   },
   {
@@ -382,7 +379,7 @@ export const categorys = [
     description:
       "Safety is a fundamental need for individuals and communities to thrive. In Indonesia, people face a wide range of risks, from natural disasters such as earthquakes or floods to rising concerns about crime, public safety, and even economic instability. Many communities lack timely access to accurate information, coordinated response systems, and recovery resources.",
     learnMore: "#",
-    
+
     image: "/tracks/safety.avif",
   },
   {
@@ -390,7 +387,7 @@ export const categorys = [
     description:
       "As an archipelago with vast fertile lands and rich seas, Indonesia is naturally an agrarian and maritime powerhouse. However, our farmers and fishers, the backbone of Indonesia’s food security, remain among the most economically vulnerable citizens. They often face significant hurdles, including aging infrastructure, volatile market prices, and the growing impact of climate change on crop yields and fish stocks.",
     learnMore: "#",
-    
+
     image: "/tracks/food.avif",
   },
 ];

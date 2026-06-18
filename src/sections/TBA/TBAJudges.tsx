@@ -55,20 +55,20 @@ export default function TBAJudges() {
         {points.map((point, i) => (
           <CornerCube key={i} className={`${point.pos} pointer-events-none`} />
         ))}
-
-        <div className="pl-6 md:pl-0 py-14 md:py-[80px] flex flex-col gap-[14px] items-start w-full border-r border-l border-[#C4A9FF] overflow-hidden">
+        {/* disini */}
+        <div className="flex flex-col py-18 md:py-20 items-start w-full border-r border-l border-[#C4A9FF] overflow-hidden">
           {/* ===================== OFFLINE JUDGES ===================== */}
-          <div className="flex items-center justify-center px-3 py-2 w-full mb-4">
+          <div className="flex items-center justify-center w-full">
             <h2 className="flex-1 font-bold text-[#221139] text-[24px] md:text-[48px] leading-normal text-center">
               Meet The Offline Judges
             </h2>
           </div>
-          <div className="w-full mb-16">
+          <div className="w-full">
             <AnimatedTestimonials testimonials={offlineJudges} />
           </div>
 
           {/* ===================== ONLINE JUDGES ===================== */}
-          <div className="flex items-center justify-center px-3 py-2 w-full mb-4 mt-8 md:mt-12">
+          <div className="flex items-center justify-center w-full">
             <h2 className="flex-1 font-bold text-[#221139] text-[24px] md:text-[48px] leading-normal text-center">
               Meet The Online Judges
             </h2>
