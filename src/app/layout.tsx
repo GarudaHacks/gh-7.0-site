@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Montserrat, Geist } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -25,7 +26,12 @@ export default function RootLayout({
       lang="en"
       className={cn("h-full antialiased", "font-sans", geist.variable)}
     >
-      <body className={`${montserrat.variable} font-sans min-h-full flex flex-col`}>{children}</body>
+      <body
+        className={`${montserrat.variable} font-sans min-h-full flex flex-col`}
+      >
+        {children}
+        <GoogleAnalytics gaId="G-DMZYV50LX3" />
+      </body>
     </html>
   );
 }
