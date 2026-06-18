@@ -500,7 +500,7 @@ export default function SectionRecaps() {
               className="md:col-span-5 md:row-span-1"
               innerClassName="bg-white"
             >
-              <div className="p-6 md:p-7 h-full flex flex-col justify-center bg-[url('/image/noise.png')] bg-repeat opacity-95">
+              <div className="p-6 md:p-7 h-full flex flex-col justify-center bg-repeat opacity-95">
                 <p className="text-[#874FFE] text-xs tracking-widest uppercase font-bold mb-5">
                   By the numbers
                 </p>

@@ -23,7 +23,7 @@ const defaultSponsors: Sponsor[] = [
   {
     name: "Centong Biru Cafe",
     size: "Medium",
-    logoSrc: "/sponsors/centong-biru.PNG",
+    logoSrc: "/sponsors/centong-biru.png",
     href: "https://www.instagram.com/centongbiru.cafe",
   },
   {
@@ -53,7 +53,7 @@ const defaultSponsors: Sponsor[] = [
   {
     name: "Paragon",
     size: "Small",
-    logoSrc: "/sponsors/paragon.png",
+    logoSrc: "/sponsors/paragon.PNG",
     href: "https://www.paragon-innovation.com",
   },
   {
@@ -239,10 +239,10 @@ export default function Sponsors({
         <div className="flex flex-col gap-8 md:gap-12 border-r border-l border-[#C4A9FF] px-2 md:px-12 py-12 md:py-[120px]">
           {/* heading */}
           <div className="flex flex-col gap-3 text-center px-4">
-            <h2 className="font-semibold text-gray-800 tracking-tight leading-[1.1] text-[24px] md:text-[28px]">
+            <h2 className="font-bold text-gray-800 tracking-tight leading-[1.1] text-[24px] md:text-[48px]">
               {title}
             </h2>
-            <p className="font-medium text-[#221139] text-[14px] md:text-[16px] leading-relaxed max-w-2xl mx-auto">
+            <p className="font-medium text-[#221139] text-[16px] leading-relaxed max-w-2xl mx-auto">
               {description}
             </p>
           </div>
