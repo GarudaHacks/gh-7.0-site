@@ -62,7 +62,7 @@ export default function SectionAboutUs() {
               <CardSpotlight className="flex flex-col gap-6 items-start md:items-end w-full px-6 py-8 rounded-xl min-h-[180px] md:h-[232px]">
                 <div className="relative z-20 flex items-center justify-center overflow-hidden w-16 h-16 shrink-0">
                   <img
-                    src="image/GH-logo.svg"
+                    src="image/GH-logo-white.svg"
                     alt="Garuda Hacks Logo"
                     className="w-full h-full object-contain pointer-events-none"
                   />

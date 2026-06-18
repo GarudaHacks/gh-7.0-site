@@ -14,17 +14,72 @@ interface Sponsor {
 }
 
 const defaultSponsors: Sponsor[] = [
-  { name: "HMIF UMN", size: "Large", logoSrc: "/sponsors/UMN.PNG", href: "https://hmif.umn.ac.id" },
-  { name: "Centong Biru Cafe", size: "Medium", logoSrc: "/sponsors/centong-biru.PNG", href: "https://www.instagram.com/centongbiru.cafe" },
-  { name: "JAPFA", size: "Medium", logoSrc: "/sponsors/japfa.png", href: "https://www.japfacomfeed.co.id" },
-  { name: "LG Sinarmas", size: "Medium", logoSrc: "/sponsors/LGSM.png", href: "https://www.lgsinarmas.com" },
-  { name: "Build Club", size: "Small", logoSrc: "/sponsors/build-club.png", href: "https://buildclub.ai" },
-  { name: "Generation Girl", size: "Small", logoSrc: "/sponsors/generation-girl.png", href: "https://generationgirl.org" },
-  { name: "Paragon", size: "Small", logoSrc: "/sponsors/lemon.png", href: "https://www.paragon-innovation.com" },
-  { name: "Wings-Mie Sedap", size: "Small", logoSrc: "/sponsors/mie-sedap.png", href: "https://wingscorp.com/brand-detail/mie-sedaap/" },
-  { name: "Wings-Aquviva", size: "Small", logoSrc: "/sponsors/aquviva.png",  href: "https://aquviva.co.id"  },
-  { name: "Wings-Teh Lemon Madu", size: "Small", logoSrc: "/sponsors/lemon.png", href: "https://wingscorp.com" },
-  { name: "Advan", size: "Small", logoSrc: "/sponsors/advan.png", href: "https://advandigital.com" },
+  {
+    name: "HMIF UMN",
+    size: "Large",
+    logoSrc: "/sponsors/UMN.PNG",
+    href: "https://hmif.umn.ac.id",
+  },
+  {
+    name: "Centong Biru Cafe",
+    size: "Medium",
+    logoSrc: "/sponsors/centong-biru.PNG",
+    href: "https://www.instagram.com/centongbiru.cafe",
+  },
+  {
+    name: "JAPFA",
+    size: "Medium",
+    logoSrc: "/sponsors/japfa.png",
+    href: "https://www.japfacomfeed.co.id",
+  },
+  {
+    name: "LG Sinarmas",
+    size: "Medium",
+    logoSrc: "/sponsors/LGSM.png",
+    href: "https://www.lgsinarmas.com",
+  },
+  {
+    name: "Build Club",
+    size: "Small",
+    logoSrc: "/sponsors/build-club.png",
+    href: "https://buildclub.ai",
+  },
+  {
+    name: "Generation Girl",
+    size: "Small",
+    logoSrc: "/sponsors/generation-girl.png",
+    href: "https://generationgirl.org",
+  },
+  {
+    name: "Paragon",
+    size: "Small",
+    logoSrc: "/sponsors/paragon.png",
+    href: "https://www.paragon-innovation.com",
+  },
+  {
+    name: "Wings-Mie Sedap",
+    size: "Small",
+    logoSrc: "/sponsors/mie-sedap.png",
+    href: "https://wingscorp.com/brand-detail/mie-sedaap/",
+  },
+  {
+    name: "Wings-Aquviva",
+    size: "Small",
+    logoSrc: "/sponsors/aquviva.png",
+    href: "https://aquviva.co.id",
+  },
+  {
+    name: "Wings-Teh Lemon Madu",
+    size: "Small",
+    logoSrc: "/sponsors/lemon.png",
+    href: "https://wingscorp.com",
+  },
+  {
+    name: "Advan",
+    size: "Small",
+    logoSrc: "/sponsors/advan.png",
+    href: "https://advandigital.com",
+  },
 ];
 
 interface SponsorsProps {
@@ -35,7 +90,6 @@ interface SponsorsProps {
   rowsPerTier?: number[];
 }
 
-// 1. Gua kurangin dikit max-width desktop (md) biar muat di layar laptop 100% tanpa turun satu baris.
 const sizeStyles: Record<
   SponsorSize,
   { box: string; padding: string; nameSize: string; nudge: string }
@@ -44,7 +98,7 @@ const sizeStyles: Record<
     box: "w-[200px] h-[210px] sm:w-[230px] sm:h-[250px] md:w-[260px] md:h-[290px]",
     padding: "p-4 md:p-5",
     nameSize: "text-[14px] md:text-[18px]",
-    nudge: "-translate-y-3 md:-translate-y-4",
+    nudge: "", // Nudge dihilangkan agar logo benar-benar center presisi di tengah card
   },
   Medium: {
     box: "w-[140px] h-[80px] sm:w-[180px] sm:h-[100px] md:w-[210px] md:h-[120px]",
@@ -86,18 +140,29 @@ export default function Sponsors({
   rowsPerTier = [3, 4, 7],
 }: SponsorsProps) {
   const tiers: Tier[] = (["Large", "Medium", "Small"] as SponsorSize[])
-    .map((size) => ({ size, sponsors: sponsors.filter((s) => s.size === size) }))
+    .map((size) => ({
+      size,
+      sponsors: sponsors.filter((s) => s.size === size),
+    }))
     .filter((t) => t.sponsors.length > 0);
 
   const points = [
     { pos: "-left-[-31px] -top-[10px] hidden lg:hidden xl:flex z-40" },
     { pos: "-right-[-31px] -top-[10px] hidden lg:hidden xl:flex" },
-    { pos: "left-[7px] -top-[10px] lg:left-[111px] lg:-top-[10px] xl:left-[153px] xl:-top-[10px]" },
-    { pos: "right-[7px] -top-[10px] lg:right-[111px] lg:-top-[10px] xl:right-[153px] xl:-top-[10px]" },
+    {
+      pos: "left-[7px] -top-[10px] lg:left-[111px] lg:-top-[10px] xl:left-[153px] xl:-top-[10px]",
+    },
+    {
+      pos: "right-[7px] -top-[10px] lg:right-[111px] lg:-top-[10px] xl:right-[153px] xl:-top-[10px]",
+    },
     { pos: "-left-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
     { pos: "-right-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
-    { pos: "left-[7px] -bottom-[10px] lg:left-[111px] lg:-bottom-[10px] xl:left-[153px] xl:-bottom-[10px]" },
-    { pos: "right-[7px] -bottom-[10px] lg:right-[111px] lg:-bottom-[10px] xl:right-[153px] xl:-bottom-[10px]" },
+    {
+      pos: "left-[7px] -bottom-[10px] lg:left-[111px] lg:-bottom-[10px] xl:left-[153px] xl:-bottom-[10px]",
+    },
+    {
+      pos: "right-[7px] -bottom-[10px] lg:right-[111px] lg:-bottom-[10px] xl:right-[153px] xl:-bottom-[10px]",
+    },
   ];
 
   let globalIdx = 0;
@@ -113,28 +178,32 @@ export default function Sponsors({
         viewport={{ once: true, margin: "-40px" }}
         transition={{ duration: 0.35, delay, ease: "easeOut" }}
         whileHover={{ y: -4 }}
-        className={`${style.box} group relative shrink-0 rounded-xl border border-[#C4A9FF] bg-[#F9F5FF] flex flex-col overflow-hidden shadow-sm hover:border-[#874FFE] hover:shadow-md transition-all`}
+        className={`${style.box} group relative shrink-0 rounded-[8px] border border-[#C4A9FF] bg-[#F9F5FF] flex flex-col overflow-hidden shadow-sm hover:border-[#874FFE] hover:shadow-md transition-all active:border-[#874FFE]`}
       >
-        {/* 3. Di mode mobile (sebelum lg), padding bottom (pb-5) dilebihin dikit 
-          biar logonya agak naik dan gak ketimpa sama label nama sponsor 
-        */}
-        <div className={`w-full h-full flex flex-col items-center justify-center relative pb-[18px] lg:pb-0 ${style.padding}`}>
-          <div className={`relative w-full h-full flex items-center justify-center ${style.nudge}`}>
+        {/* Container Utama Gambar: Padding dinormalisasi (pb-0) supaya logo penuh dan center */}
+        <div
+          className={`w-full h-full flex flex-col items-center justify-center relative ${style.padding}`}
+        >
+          <div
+            className={`relative w-full h-full flex items-center justify-center ${style.nudge}`}
+          >
             <Image
               src={sponsor.logoSrc}
               alt={sponsor.name}
               fill
-              className="object-contain transition-transform duration-300 lg:group-hover:scale-[1.04]"
+              draggable={false}
+              className="object-contain transition-transform duration-300 group-hover:scale-[1.04] group-active:scale-[1.04] select-none"
               sizes="(max-width: 768px) 100vw, 33vw"
             />
           </div>
         </div>
 
-        {/* 4. Mobile & Tablet: Label standby selalu terlihat di bawah (translate-y-0).
-             Layar Besar (lg): Label sembunyi (translate-y-full) dan baru muncul pas di-hover.
-        */}
-        <div className="absolute inset-x-0 bottom-0 translate-y-0 lg:translate-y-full lg:group-hover:translate-y-0 transition-transform duration-300 bg-[#874FFE]/90 lg:bg-[#874FFE] text-[#F9F5FF] text-center py-[2px] md:py-1 px-1 z-10 backdrop-blur-sm lg:backdrop-blur-none">
-          <span className={`font-semibold ${style.nameSize} leading-tight block truncate`}>
+        {/* FIX UTAMA: Label nama sponsor di-set tersembunyi secara default (translate-y-full).
+            Akan bergeser naik (translate-y-0) HANYA ketika di-hover (Desktop) ATAU ketika di-active/disentuh jari (Mobile). */}
+        <div className="absolute inset-x-0 bottom-0 translate-y-full group-hover:translate-y-0 group-active:translate-y-0 transition-transform duration-300 bg-[#874FFE] text-[#F9F5FF] text-center py-[4px] md:py-1 px-1 z-10">
+          <span
+            className={`font-semibold ${style.nameSize} leading-tight block truncate`}
+          >
             {sponsor.name}
           </span>
         </div>
@@ -147,7 +216,7 @@ export default function Sponsors({
         href={sponsor.href}
         target="_blank"
         rel="noopener noreferrer"
-        className="shrink-0 cursor-pointer"
+        className="shrink-0 cursor-pointer block"
       >
         {card}
       </a>
@@ -159,7 +228,9 @@ export default function Sponsors({
   };
 
   return (
-    <section className={`w-full relative border-b border-[#C4A9FF] ${className}`}>
+    <section
+      className={`w-full relative border-b border-[#C4A9FF] ${className}`}
+    >
       <div className="mx-auto max-w-[1440px] px-4 md:px-8 lg:px-[120px] border-r border-l border-[#C4A9FF]">
         {points.map((point, i) => (
           <CornerCube key={i} className={`${point.pos} pointer-events-none`} />
@@ -179,11 +250,15 @@ export default function Sponsors({
           {/* pyramid */}
           <div className="flex flex-col items-center gap-6 md:gap-8">
             {tiers.map((tier, tierIdx) => {
-              const perRow = rowsPerTier[tierIdx] ?? rowsPerTier[rowsPerTier.length - 1];
+              const perRow =
+                rowsPerTier[tierIdx] ?? rowsPerTier[rowsPerTier.length - 1];
               const rows = chunkBalanced(tier.sponsors, perRow);
 
               return (
-                <div key={tier.size} className="flex flex-col items-center gap-3 md:gap-4 w-full">
+                <div
+                  key={tier.size}
+                  className="flex flex-col items-center gap-3 md:gap-4 w-full"
+                >
                   {rows.map((row, rowIdx) => (
                     <div
                       key={rowIdx}

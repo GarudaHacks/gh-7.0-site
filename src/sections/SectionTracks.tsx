@@ -98,7 +98,7 @@ export default function Overview({
 
                         <div className="flex flex-col gap-2">
                           <p
-                            className={`font-medium text-[#221139] text-[16px] text-justify leading-relaxed transition-all duration-300 `}
+                            className={`font-medium text-[#221139] text-[16px] text-left leading-relaxed transition-all duration-300`}
                             // ${
                             //   isExpanded ? "" : "line-clamp-3"
                             // }

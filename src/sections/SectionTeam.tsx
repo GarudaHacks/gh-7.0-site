@@ -42,19 +42,19 @@ function Portrait({
               src={`/team/${member.photo}`}
               alt={member.name}
               fill
-              className="object-cover"
+              className="object-cover user-select-none pointer-events-none"
               sizes="170px"
             />
           )}
         </div>
 
-        <Image
+        {/* <Image
           src={outlineSrc(frame)}
           alt=""
           fill
           aria-hidden="false"
           className="pointer-events-none absolute inset-0 object-contain w-full transition-transform duration-300 group-hover/tile:scale-[1.04] z-20"
-        />
+        /> */}
 
         <div className="absolute -bottom-2 -right-2 z-50 h-9 w-9 drop-shadow-md transition-transform duration-300 group-hover/tile:scale-110 md:h-11 md:w-11">
           <Image src="/frames/logo-garuda.svg" alt="" fill aria-hidden="true" />
