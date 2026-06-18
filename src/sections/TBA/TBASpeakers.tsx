@@ -15,28 +15,28 @@ interface Speaker {
 }
 
 const speaker = [
-    {
-      id: 1,
-      name: "To be announced",
-      role: "Garuda Hacks Speaker",
-      photo: "/image/PFP.png",
-      bio: "Check out our Instagram for updates on our speakers! @garudahacks",
-    },
-    {
-      id: 2,
-      name: "To be announced",
-      role: "Garuda Hacks Speaker",
-      photo: "/image/PFP.png",
-      bio: "Check out our Instagram for updates on our speakers! @garudahacks",
-    },
-    {
-      id: 3,
-      name: "To be announced",
-      role: "Garuda Hacks Speaker",
-      photo: "/image/PFP.png",
-      bio: "Check out our Instagram for updates on our speakers! @garudahacks",
-    },
-  ];
+  {
+    id: 1,
+    name: "To be announced",
+    role: "Garuda Hacks Speaker",
+    photo: "/image/PFP.png",
+    bio: "Check out our Instagram for updates on our speakers! @garudahacks",
+  },
+  {
+    id: 2,
+    name: "To be announced",
+    role: "Garuda Hacks Speaker",
+    photo: "/image/PFP.png",
+    bio: "Check out our Instagram for updates on our speakers! @garudahacks",
+  },
+  {
+    id: 3,
+    name: "To be announced",
+    role: "Garuda Hacks Speaker",
+    photo: "/image/PFP.png",
+    bio: "Check out our Instagram for updates on our speakers! @garudahacks",
+  },
+];
 
 const speakers: Speaker[] = [speaker[0], speaker[1], speaker[2]];
 
@@ -49,26 +49,30 @@ function SpeakerCard({
 }) {
   return (
     <div
-      className="group cursor-pointer [perspective:1000px] shrink-0 w-[264px] snap-center"
+      className="group cursor-pointer [perspective:1000px] shrink-0 w-[264px] snap-center select-none"
       onClick={() => onOpen(speaker)}
       role="button"
       tabIndex={0}
       onKeyDown={(e) => e.key === "Enter" && onOpen(speaker)}
       aria-label={`Open ${speaker.name} profile`}
     >
-      <div className="relative w-full h-[339px] transition-transform duration-500 ease-in-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+      {/* ADJUSTMENT DI SINI: Menambahkan efek responsif 3D taktil (group-active) saat disentuh jari di layar HP */}
+      <div className="relative w-full h-[339px] transition-transform duration-500 ease-in-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-active:scale-95 group-active:[transform:rotateX(4deg)_rotateY(8deg)] md:group-active:scale-100 md:group-active:[transform:none]">
+        
+        {/* Sisi Depan Card */}
         <div className="absolute inset-0 bg-[#F9F5FF] border border-[#C4A9FF] rounded-xl flex flex-col items-center overflow-hidden p-3 [backface-visibility:hidden]">
           <div className="bg-[#C4A9FF] flex items-end justify-end w-full h-[248px] rounded-lg p-3 relative overflow-hidden">
             <img
               src={speaker.photo}
               alt={speaker.name}
-              className="absolute inset-0 w-full h-full object-cover rounded-lg"
+              draggable={false}
+              className="absolute inset-0 w-full h-full object-cover rounded-lg select-none"
               onError={(e) => {
                 (e.target as HTMLImageElement).style.display = "none";
               }}
             />
 
-            <div className="relative z-10 w-12 h-12 bg-[#AD87FF] rounded-full flex items-center justify-center shrink-0">
+            <div className="relative z-10 w-12 h-12 bg-[#AD87FF] rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-active:scale-110">
               <ArrowRightIcon
                 className="h-5 w-5 stroke-[#F9F5FF]"
                 strokeWidth={1.5}
@@ -78,35 +82,36 @@ function SpeakerCard({
 
           <div className="flex flex-col items-center py-3 w-full">
             <div className="flex items-center w-full">
-              <p className="flex-1  font-medium text-[#221139] text-[18px] leading-normal break-words">
+              <p className="flex-1 font-medium text-[#221139] text-[18px] leading-normal break-words">
                 {speaker.name}
               </p>
             </div>
             <div className="flex items-center w-full">
-              <p className="flex-1  font-normal text-[#221139] text-[16px] leading-normal break-words">
+              <p className="flex-1 font-normal text-[#221139] text-[16px] leading-normal break-words">
                 {speaker.role}
               </p>
             </div>
           </div>
         </div>
 
+        {/* Sisi Belakang Card */}
         <div className="absolute inset-0 bg-[#F9F5FF] border border-[#C4A9FF] rounded-xl flex flex-col items-center overflow-hidden p-3 [backface-visibility:hidden] [transform:rotateY(180deg)]">
           <div className="flex flex-col items-center gap-2 w-full h-full">
             <div className="w-full">
-              <p className=" font-semibold text-[#221139] text-[18px] leading-normal w-full">
+              <p className="font-semibold text-[#221139] text-[18px] leading-normal w-full">
                 {speaker.name}
               </p>
-              <p className=" font-medium text-[#8E47D6] text-[16px] leading-normal w-full">
+              <p className="font-medium text-[#8E47D6] text-[16px] leading-normal w-full">
                 {speaker.role}
               </p>
             </div>
 
             <div className="flex items-start w-full flex-1 overflow-hidden">
-              <p className=" font-normal text-[#221139] text-[16px] leading-snug break-words line-clamp-[8]">
+              <p className="font-normal text-[#221139] text-[16px] leading-snug break-words line-clamp-[8]">
                 {speaker.bio}
               </p>
             </div>
-            <p className=" font-medium text-[#AD87FF] text-[16px] mt-2 self-start">
+            <p className="font-medium text-[#AD87FF] text-[16px] mt-2 self-start">
               Click to read full bio →
             </p>
           </div>
@@ -151,14 +156,12 @@ function SpeakerModal({
             <img
               src={speaker.photo}
               alt={speaker.name}
-              className="w-full h-full object-cover"
+              draggable={false}
+              className="w-full h-full object-cover select-none"
               onError={(e) => {
                 (e.target as HTMLImageElement).style.display = "none";
               }}
             />
-            {/* <span className="absolute inset-0 flex items-center justify-center  font-bold text-[#221139] text-2xl pointer-events-none">
-              {speaker.name.charAt(0)}
-            </span> */}
           </div>
           <div>
             <h3 className="font-semibold text-[#221139] text-[20px] leading-normal">

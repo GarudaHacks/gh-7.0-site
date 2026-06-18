@@ -41,7 +41,7 @@ export default function SectionAboutUs() {
         ))}
         <div className="px-4 md:px-12 py-16 md:py-[120px] border-r border-l border-r-[#C4A9FF] border-l-[#C4A9FF] flex flex-col gap-6 md:gap-8 items-start w-full">
           <div className="flex items-center justify-center px-4 py-2 w-full">
-            <h2 className="flex-1 font-medium text-[#221139] text-2xl md:text-[48px] leading-snug text-center">
+            <h2 className="flex-1 font-medium text-[#221139] text-[24px] md:text-[48px] leading-snug text-center">
               Garuda Hacks is Southeast Asia's largest hackathon, with over{" "}
               <span className="font-bold">
                 <CountUp
@@ -68,7 +68,7 @@ export default function SectionAboutUs() {
                   />
                 </div>
 
-                <p className="relative z-20 font-medium text-[#F9F5FF] text-sm md:text-[16px] text-justify leading-relaxed w-full">
+                <p className="relative z-20 font-medium text-[#F9F5FF] text-[16px] text-justify leading-relaxed w-full">
                   {AboutData[0].description}
                 </p>
               </CardSpotlight>
@@ -76,7 +76,7 @@ export default function SectionAboutUs() {
 
             <div className="flex-1 flex flex-col items-center justify-end w-full px-2 py-0.5">
               <div className="flex flex-col gap-4 items-center md:items-end w-full px-0 md:px-6 py-4 md:-py-4 rounded-xl">
-                <p className=" font-medium text-[#221139] text-sm md:text-[16px] text-justify leading-relaxed w-full">
+                <p className=" font-medium text-[#221139] text-[16px] text-justify leading-relaxed w-full">
                   {AboutData[1].description}
                 </p>
                 <a
