@@ -13,24 +13,16 @@ export default function SectionAboutUs() {
     { pos: "-right-[-31px] -top-[10px] hidden lg:hidden xl:flex" },
 
     // dott atas
-    {
-      pos: "left-[7px] -top-[10px] lg:left-[111px] lg:-top-[10px] xl:left-[153px] xl:-top-[10px]",
-    },
-    {
-      pos: "right-[7px] -top-[10px] lg:right-[111px] lg:-top-[10px] xl:right-[153px] xl:-top-[10px]",
-    },
+    { pos: "left-[7px] -top-[10px] lg:left-[111px] lg:-top-[10px] xl:left-[153px] xl:-top-[10px]" },
+    { pos: "right-[7px] -top-[10px] lg:right-[111px] lg:-top-[10px] xl:right-[153px] xl:-top-[10px]" },
 
     // dott bawah
     { pos: "-left-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
     { pos: "-right-[-31px] -bottom-[10px] hidden lg:hidden xl:flex z-40" },
 
     // dott bawah
-    {
-      pos: "left-[7px] -bottom-[10px] lg:left-[111px] lg:-bottom-[10px] xl:left-[153px] xl:-bottom-[10px]",
-    },
-    {
-      pos: "right-[7px] -bottom-[10px] lg:right-[111px] lg:-bottom-[10px] xl:right-[153px] xl:-bottom-[10px]",
-    },
+    { pos: "left-[7px] -bottom-[10px] lg:left-[111px] lg:-bottom-[10px] xl:left-[153px] xl:-bottom-[10px]" },
+    { pos: "right-[7px] -bottom-[10px] lg:right-[111px] lg:-bottom-[10px] xl:right-[153px] xl:-bottom-[10px]" },
   ];
 
   return (

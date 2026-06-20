@@ -242,7 +242,7 @@ export default function Sponsors({
             <h2 className="font-bold text-gray-800 tracking-tight leading-[1.1] text-[24px] md:text-[48px]">
               {title}
             </h2>
-            <p className="font-medium text-[#221139] text-[16px] leading-relaxed max-w-2xl mx-auto">
+            <p className="font-medium text-[#221139] text-[16px] md:text-[20px] leading-relaxed max-w-2xl mx-auto">
               {description}
             </p>
           </div>

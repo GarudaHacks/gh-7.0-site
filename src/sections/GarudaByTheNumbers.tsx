@@ -47,7 +47,7 @@ export default function GarudaByTheNumbers() {
                   </p>
                 </div>
 
-                <div className="absolute -right-4 -bottom-6 w-[180px] h-[180px] pointer-events-none z-0">
+                <div className="absolute -right-4 top-10 w-[180px] h-[180px] pointer-events-none z-0">
                   <div className="relative w-full h-full opacity-40 rounded-full group-hover:opacity-100 group-active:opacity-100 group-hover:scale-110 group-active:scale-110 group-hover:-rotate-12 group-active:-rotate-12 transition-all duration-500 ease-out">
                     <Image
                       src={`/image/${item.iconBaseName}.svg`}
