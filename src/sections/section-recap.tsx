@@ -11,7 +11,7 @@ const stats = [
   { value: "6,000+", label: "Participants" },
   { value: "30H", label: "Nonstop hacking" },
   { value: "120+", label: "Projects built" },
-  { value: "$50K", label: "In prizes" },
+  { value: "IDR 50M", label: "In prizes" },
 ];
 
 const galleryImages = [
@@ -439,15 +439,14 @@ export default function SectionRecaps() {
         {/* Inner padded area */}
         <div className="py-14 md:py-[80px] flex flex-col gap-10 w-full border-r border-l border-[#C4A9FF] px-4 md:px-12">
           <div className="flex flex-col items-center gap-3 text-center mb-2">
-            <span className="text-[#874FFE] text-xs font-bold tracking-[0.2em] uppercase">
-              Garuda Hacks 6.0
+            <span className="text-[#874FFE] text-16px font-bold tracking-[0.2em] uppercase">
+              Garuda Hacks 1.0 - 6.0
             </span>
             <h2 className="text-[#221139] font-extrabold text-3xl md:text-4xl tracking-tight">
               Recap
             </h2>
-            <p className="text-[#5b4a7a] text-[16px] md:text-base max-w-md leading-relaxed font-medium">
-              Southeast Asia's largest hackathon — 30 hours of energy, code,
-              and community.
+            <p className="text-[#5b4a7a] text-[16px] md:text-[18px] max-w-md leading-relaxed font-medium">
+              Southeast Asia's largest hackathon — 30 hours of energy, code, and community.
             </p>
           </div>
 
@@ -482,14 +481,14 @@ export default function SectionRecaps() {
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#C4A9FF]" />
-                    <span className="text-[#C4A9FF] text-xs tracking-widest uppercase font-medium">
+                    <span className="text-[#C4A9FF] text-16px tracking-widest uppercase font-medium">
                       Aftermovie
                     </span>
                   </div>
                   <h3 className="text-white text-xl md:text-2xl font-bold tracking-tight leading-snug">
                     Relive the Moment
                   </h3>
-                  <p className="text-[#9b7ecb] text-sm mt-1.5 leading-relaxed max-w-sm">
+                  <p className="text-[#9b7ecb] text-16px md:text-18px mt-1.5 leading-relaxed max-w-sm">
                     6,000+ builders, 30 sleepless hours.
                   </p>
                 </motion.div>
@@ -501,16 +500,16 @@ export default function SectionRecaps() {
               innerClassName="bg-white"
             >
               <div className="p-6 md:p-7 h-full flex flex-col justify-center bg-repeat opacity-95">
-                <p className="text-[#874FFE] text-xs tracking-widest uppercase font-bold mb-5">
+                <p className="text-[#874FFE] text-18px tracking-widest uppercase font-bold mb-5">
                   By the numbers
                 </p>
                 <div className="grid grid-cols-2 gap-y-5 gap-x-3">
                   {stats.map(({ value, label }) => (
                     <div key={label} className="flex flex-col gap-0.5">
-                      <span className="text-[#221139] text-2xl md:text-3xl font-extrabold tracking-tight">
+                      <span className="text-[#221139] text-16px md:text-3xl font-extrabold tracking-tight">
                         {value}
                       </span>
-                      <span className="text-[#67339C] text-xs leading-tight font-medium">
+                      <span className="text-[#67339C] text-14px md:text-16px leading-tight font-medium">
                         {label}
                       </span>
                     </div>

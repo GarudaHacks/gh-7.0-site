@@ -82,10 +82,10 @@ export default function Footer() {
               <a href="#" className="w-10 h-10 rounded-full border-2 border-white/20 flex items-center justify-center hover:border-white hover:bg-white hover:text-[#08031a] transition-all">
                 <FaGithub className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full border-2 border-white/20 flex items-center justify-center hover:border-white hover:bg-white hover:text-[#08031a] transition-all">
+              <a href="https://www.youtube.com/@garudahacks1148" className="w-10 h-10 rounded-full border-2 border-white/20 flex items-center justify-center hover:border-white hover:bg-white hover:text-[#08031a] transition-all">
                 <FaYoutube className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full border-2 border-white/20 flex items-center justify-center hover:border-white hover:bg-white hover:text-[#08031a] transition-all">
+              <a href="https://www.instagram.com/garudahacks" className="w-10 h-10 rounded-full border-2 border-white/20 flex items-center justify-center hover:border-white hover:bg-white hover:text-[#08031a] transition-all">
                 <FaInstagram className="w-5 h-5" />
               </a>
               <a href="#" className="w-10 h-10 rounded-full border-2 border-white/20 flex items-center justify-center hover:border-white hover:bg-white hover:text-[#08031a] transition-all">
@@ -125,8 +125,8 @@ export default function Footer() {
           </p>
           
           <div className="flex gap-6 mt-2 md:mt-0 font-medium">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <a href="https://portal.garudahacks.com/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="https://portal.garudahacks.com/terms" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
         </div>
 
