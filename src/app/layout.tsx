@@ -3,7 +3,6 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Montserrat, Geist } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import faviconImg from "./icon.svg";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -15,9 +14,6 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Garudahacks 7.0",
   description: "Comingsoon",
-  icons: {
-    icon: faviconImg,
-  },
 };
 
 export default function RootLayout({
