@@ -73,9 +73,9 @@ export default function Footer() {
               <p className="font-semibold text-lg text-white">
                 Next Generation of Builders.
               </p>
-              <p className="text-[#C4A9FF] mt-2 font-medium">
-                contact@garudahacks.com
-              </p>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ben@garudahacks.com" className="text-[#C4A9FF] mt-2 font-medium hover:text-[#C4A9FF]/80 transition-colors">
+                ben@garudahacks.com
+              </a>
             </div>
 
             <div className="flex items-center gap-4 mt-4">
@@ -91,7 +91,7 @@ export default function Footer() {
               <a href="#" className="w-10 h-10 rounded-full border-2 border-white/20 flex items-center justify-center hover:border-white hover:bg-white hover:text-[#08031a] transition-all">
                 <FaDiscord className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full border-2 border-white/20 flex items-center justify-center hover:border-white hover:bg-white hover:text-[#08031a] transition-all">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ben@garudahacks.com" className="w-10 h-10 rounded-full border-2 border-white/20 flex items-center justify-center hover:border-white hover:bg-white hover:text-[#08031a] transition-all">
                 <FaEnvelope className="w-4 h-4" />
               </a>
             </div>
@@ -99,7 +99,7 @@ export default function Footer() {
 
           {footerLinks.map((col) => (
             <div key={col.title} className="flex flex-col gap-5">
-              <h3 className="font-bold text-[17px] text-white tracking-wide">
+              <h3 className="font-bold text-[16px] text-white tracking-wide">
                 {col.title}
               </h3>
               <div className="flex flex-col gap-3.5">
