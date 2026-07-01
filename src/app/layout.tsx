@@ -13,7 +13,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "Garuda Hacks 7.0",
-  description: "Be part of Indonesia's largest hackathon",
+  description: "Be part of Indonesia's largest hackathon, We are a 501c3 nonprofit dedicated to empowering young Indonesians with the skills and motivation to solve the country's most urgent issues",
   verification:{
     google: "unHurz_L_3inojTAvWWqQJafqq00-LtPuMfgJ8RxP2o",
   }
