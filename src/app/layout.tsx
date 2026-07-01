@@ -12,8 +12,11 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Garudahacks 7.0",
-  description: "Comingsoon",
+  title: "Garuda Hacks 7.0",
+  description: "Be part of Indonesia's largest hackathon",
+  verification:{
+    google: "unHurz_L_3inojTAvWWqQJafqq00-LtPuMfgJ8RxP2o",
+  }
 };
 
 export default function RootLayout({

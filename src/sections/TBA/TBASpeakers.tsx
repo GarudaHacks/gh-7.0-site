@@ -5,6 +5,7 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 // import { speaker } from "@/data/data";
 import CornerCube from "@/components/Cornercube";
+import Image from "next/image";
 
 interface Speaker {
   id: number;
@@ -62,9 +63,13 @@ function SpeakerCard({
         {/* Sisi Depan Card */}
         <div className="absolute inset-0 bg-[#F9F5FF] border border-[#C4A9FF] rounded-xl flex flex-col items-center overflow-hidden p-3 [backface-visibility:hidden]">
           <div className="bg-[#C4A9FF] flex items-end justify-end w-full h-[248px] rounded-lg p-3 relative overflow-hidden">
-            <img
+            <Image
               src={speaker.photo}
               alt={speaker.name}
+              width={264}
+              height={248}
+              quality={20}
+              priority
               draggable={false}
               className="absolute inset-0 w-full h-full object-cover rounded-lg select-none"
               onError={(e) => {
@@ -153,9 +158,10 @@ function SpeakerModal({
 
         <div className="flex items-center gap-4 mb-5">
           <div className="w-[72px] h-[72px] rounded-full overflow-hidden bg-[#C4A9FF] shrink-0 relative">
-            <img
+            <Image
               src={speaker.photo}
               alt={speaker.name}
+              quality={20}
               draggable={false}
               className="w-full h-full object-cover select-none"
               onError={(e) => {
