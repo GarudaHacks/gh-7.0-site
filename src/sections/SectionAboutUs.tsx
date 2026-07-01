@@ -5,6 +5,7 @@ import { AboutData } from "@/data/data";
 import CountUp from "../components/CountUp";
 import { CardSpotlight } from "@/components/ui/card-spotlight";
 import CornerCube from "@/components/Cornercube";
+import Image from "next/image";
 
 export default function SectionAboutUs() {
   const points = [
@@ -53,10 +54,12 @@ export default function SectionAboutUs() {
             <div className="flex-1 flex items-end justify-center py-0.5 w-full">
               <CardSpotlight className="flex flex-col gap-6 items-start md:items-end w-full px-6 py-8 rounded-xl min-h-[180px] md:h-[232px]">
                 <div className="relative z-20 flex items-center justify-center overflow-hidden w-16 h-16 shrink-0">
-                  <img
-                    src="image/GH-logo-white.svg"
+                  <Image
+                    src="/image/GH-logo-white.svg"
                     alt="Garuda Hacks Logo"
                     className="w-full h-full object-contain pointer-events-none"
+                    width={64}
+                    height={64}
                   />
                 </div>
 

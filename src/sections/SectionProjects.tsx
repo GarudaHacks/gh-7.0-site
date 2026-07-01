@@ -34,9 +34,9 @@ function ProjectCard({
         <h3 className="font-bold text-[#221139] text-[19px] group-hover:text-[#874FFE] transition-colors duration-300">
           {project.title}
         </h3>
-        <span className="font-bold text-[#874FFE] text-[14px] bg-[#F9F5FF] border border-[#C4A9FF]/50 px-2.5 py-1 rounded-md">
+        {/* <span className="font-bold text-[#874FFE] text-[14px] bg-[#F9F5FF] border border-[#C4A9FF]/50 px-2.5 py-1 rounded-md">
           {project.number}
-        </span>
+        </span> */}
       </div>
 
       <div className="relative z-10 w-full h-[190px] bg-[#EAE5F4] rounded-xl overflow-hidden border border-[#C4A9FF]/40 group-hover:border-[#C4A9FF] transition-colors">
@@ -169,7 +169,7 @@ export default function SectionProjectPast() {
         <div className="py-14 md:py-[90px] flex flex-col gap-10 w-full border-r border-l border-[#C4A9FF] overflow-hidden">
           <div className="flex items-center justify-center px-6 w-full">
             <h2 className="font-bold text-[#221139] text-3xl md:text-[48px] leading-normal text-center tracking-tight">
-              Project Past
+              Past Projects
             </h2>
           </div>
 
