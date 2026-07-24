@@ -16,11 +16,12 @@ import SectionProjectPast from "@/sections/SectionProjects";
 import SectionRecaps from "@/sections/section-recap";
 import StickerPeel from "@/components/StickerPeel";
 import { motion } from "framer-motion";
-// import SectionJudges from "@/sections/SectionJudges"; <-ganti kalo udah fix
+import SectionJudges from "@/sections/SectionJudges"; 
 import Sponsors from "@/sections/SectionSponsors";
 import TBAJudges from "@/sections/TBA/TBAJudges";
 import TBASpeakers from "@/sections/TBA/TBASpeakers";
 import SectionTeam from "@/sections/SectionTeam";
+import SectionWinners from "@/sections/SectionWinners";
 
 export default function Home() {
   return (
@@ -48,13 +49,14 @@ export default function Home() {
       <SectionTracks />
       <GarudaByTheNumbers />
       <Sponsors />
-      {/* <SectionSpeakers /> */}
-      <TBASpeakers />
-      <TBAJudges />
-      {/* <SectionJudges /> */}
+      <SectionSpeakers />
+      {/* <TBASpeakers />
+      <TBAJudges /> */}
+      <SectionJudges />
       <section id="projects">
         <SectionProjectPast />
       </section>
+      {/* <SectionWinners /> */}
 
       <SectionRecaps />
       <SectionTeam />

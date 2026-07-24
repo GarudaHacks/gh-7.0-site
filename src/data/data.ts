@@ -141,24 +141,17 @@ export const contributors = [
 export const speaker = [
   {
     id: 1,
-    name: "Sarah Fajri",
-    role: "Project Manager at Deloitte",
-    photo: "/image/sarah.png",
-    bio: "Check out our Instagram @garudahacks.",
+    name: "Mr. M. Arifin Dobson",
+    role: "IT Business Partner Lead for Logistics and Distribution",
+    photo: "/speakers/arifin.png",
+    bio: "",
   },
   {
     id: 2,
-    name: "Budi Santoso",
-    role: "CTO at Gojek",
-    photo: "/image/sarah.png",
-    bio: "Check out our Instagram @garudahacks.",
-  },
-  {
-    id: 3,
-    name: "Rina Putri",
-    role: "AI Researcher at Google",
-    photo: "/image/sarah.png",
-    bio: "Check out our Instagram @garudahacks.",
+    name: "Mr. Titan Danar",
+    role: "Intel Master Trainer",
+    photo: "/speakers/titan.png",
+    bio: "",
   },
 ];
 
@@ -239,133 +232,97 @@ export const judges = [
   },
 ];
 
-// ... (biarkan data AboutData, byTheNumbers, contributors, speaker, projects seperti sebelumnya)
+export type Judge = {
+  quote: string;
+  name: string;
+  designation: string;
+  src: string;
+};
 
-export const offlineJudges = [
+export type JudgeTrack = {
+  track: string;
+  judges: Judge[];
+};
+
+export const offlineJudgeTracks: JudgeTrack[] = [
   {
-    quote: "Kutipan untuk offline judge bisa diisi di sini.",
-    name: "Angelika Putri",
-    designation: "Judge",
-    src: "/offline/Angelika Putri.jpg",
+    track: "Health",
+    judges: [
+      { quote: "", name: "Natali Ardianto", designation: "CEO @ Lifepack.id", src: "/offline/health/Natali Ardianto.png" },
+      { quote: "", name: "Timotius Haniel", designation: "Product Manager @ Superbank", src: "/offline/health/Timotius Haniel.png" },
+      { quote: "", name: "Rafie Amandio Fauzan", designation: "CTO @ Summon AI", src: "/offline/health/rafie amandia.png" },
+      { quote: "", name: "Dr. Elisa Indriasari", designation: "CEO & Founder @ Digimaster and Coachee360", src: "/offline/health/dr elisa indriasari.png" },
+      { quote: "", name: "Elfindah Princes", designation: "CEO @ Westin Group", src: "/offline/health/elfindah princes.png" },
+      { quote: "", name: "Mario Caesar Kristantoputra", designation: "Data Warehouse Engineer @ Kredit Pintar Indonesia", src: "/offline/health/mario caesar.png" },
+      { quote: "", name: "Dr. Tirta Darmawan Susanto", designation: "Lecturer @ UPH", src: "/offline/health/Dr. Tirta Darmawan Susanto.png" },
+      { quote: "", name: "Dr. Reno Yonora", designation: "Anesthesiologist @ RSU BUNDA MENTENG JAKARTA", src: "/offline/health/Dr. Reno Yonora.png" },
+      { quote: "", name: "Eka Kurnia", designation: "Head of Digital Transformation and Ruang Talenta @ Maxy Academy", src: "/offline/health/eka kurnia.png" },
+      { quote: "", name: "Evan Wijaya Tanotogono", designation: "CEO & Co-Founder @ Rey", src: "/offline/health/evan wiaya.png" },
+      { quote: "", name: "Rina Fitri", designation: "Komisaris @ PT. Tandon Citra Mutri", src: "/offline/health/rina fitri.png" },
+      { quote: "", name: "Martinus Indra Senjaya", designation: "Automation Project Management @ Sinarmas APP", src: "/offline/health/martinus indra.png" },
+    ],
   },
-  {
-    quote: "Kutipan untuk offline judge bisa diisi di sini.",
-    name: "Billtraviano Harda",
-    designation: "Judge",
-    src: "/offline/BillHardaFotoJas - Billtraviano Harda.jpeg",
+ {
+    track: "Safety",
+    judges: [
+      { quote: "", name: "Albertus Vincent", designation: "Data Engineer @ BUMN Banking", src: "/offline/safety/albertus vincnt.png" },
+      { quote: "", name: "Franciscus Xaverius Taro Lay", designation: "Founder @ Kalama Cyber", src: "/offline/safety/franciscus xaverius.png" },
+      { quote: "", name: "Andy Djojo Budiman", designation: "Ketua Komtap Software @ APTIKNAS", src: "/offline/safety/andy djojo.png" },
+      { quote: "", name: "Andy Febrico Bintoro", designation: "CTO/Co-Founder @ MAXY Academy", src: "/offline/safety/andy febrico.png" },
+      { quote: "", name: "Dr. Muhamad Ismail", designation: "CEO @ PT. Zahir Internasional", src: "/offline/safety/dr muh ismail.png" },
+      { quote: "", name: "Febry Indra Setyawan", designation: "CTO @ hibank", src: "/offline/safety/febry indra set.png" },
+      { quote: "", name: "Andisa Rizky Febrianti", designation: "Digital Communication Strategist @ Generation Girl", src: "/offline/safety/andisa rixky feb.png" },
+      { quote: "", name: "Angelika Putri", designation: "Ketua Komtap Teknologi Finansial & Inovasi Pembayaran Digital @ APTIKNAS", src: "/offline/safety/angleika putri.png" },
+      { quote: "", name: "Billtraviano Ferlan Harda", designation: "CEO @ DOT Indonesia", src: "/offline/safety/billtraviano.png" },
+      { quote: "", name: "Patrick Theodore Tjandra", designation: "M&A @ JAPFA Comfeed", src: "/offline/safety/patrick theodore.png" },
+      { quote: "", name: "Yuliasiane Sulistiyawati", designation: "Director @ PT. VNCOOL Technology Indonesia", src: "/offline/safety/yuliasiane s.png" },
+      { quote: "", name: "Mikael Dewabrata", designation: "Content Creator @ learnfol.io", src: "/offline/safety/mikael dewabrata.png" }
+    ],
   },
-  {
-    quote: "Kutipan untuk offline judge bisa diisi di sini.",
-    name: "Arief Budiman",
-    designation: "Judge",
-    src: "/offline/Copy of LRP_5501 - Arief Budiman.jpeg",
-  },
-  {
-    quote: "Kutipan untuk offline judge bisa diisi di sini.",
-    name: "Hervina Safira",
-    designation: "Judge",
-    src: "/offline/DSC08090-min - Hervina Safira.jpeg",
-  },
-  {
-    quote: "Kutipan untuk offline judge bisa diisi di sini.",
-    name: "Taro Lay",
-    designation: "Judge",
-    src: "/offline/IMG_0787 - Taro Lay.jpeg",
-  },
-  {
-    quote: "Kutipan untuk offline judge bisa diisi di sini.",
-    name: "Nunung Nurul Qomariyah",
-    designation: "Judge",
-    src: "/offline/IMG_8824 - Nunung Nurul Qomariyah.jpeg",
-  },
-  {
-    quote: "Kutipan untuk offline judge bisa diisi di sini.",
-    name: "Julian Sukmana Putra",
-    designation: "Judge",
-    src: "/offline/IMG_9064 - Julian Sukmana Putra.jpeg",
-  },
-  {
-    quote: "Kutipan untuk offline judge bisa diisi di sini.",
-    name: "Louis",
-    designation: "Judge",
-    src: "/offline/louis.png",
-  },
-  {
-    quote: "Kutipan untuk offline judge bisa diisi di sini.",
-    name: "Mario Caesar",
-    designation: "Judge",
-    src: "/offline/Mario Caesar.jpeg",
-  },
-  {
-    quote: "Kutipan untuk offline judge bisa diisi di sini.",
-    name: "Martinus Indra Senjaya",
-    designation: "Judge",
-    src: "/offline/Martinus photo - Martinus Indra Senjaya.jpeg",
-  },
-  {
-    quote: "Kutipan untuk offline judge bisa diisi di sini.",
-    name: "Nino Wandhana",
-    designation: "Judge",
-    src: "/offline/Nino Headshot - Nino Wandhana.png",
-  },
-  {
-    quote: "Kutipan untuk offline judge bisa diisi di sini.",
-    name: "Rina Fitri",
-    designation: "Judge",
-    src: "/offline/rina-fitri.jpeg",
-  },
-  {
-    quote: "Kutipan untuk offline judge bisa diisi di sini.",
-    name: "Sandy Kusuma",
-    designation: "Judge",
-    src: "/offline/SK Alam Sutra - Sandy Kusuma.jpeg",
-  },
-  {
-    quote: "Kutipan untuk offline judge bisa diisi di sini.",
-    name: "Timotius Haniel",
-    designation: "Judge",
-    src: "/offline/Timotius Haniel.jpeg",
+ {
+    track: "Agriculture & Food Systems",
+    judges: [
+      { quote: "", name: "Angkoso Brami Prasojo", designation: "AI Engineer Manager @Sinarmas APP", src: "/offline/agri/angkoso brami.png" },
+      { quote: "", name: "Aditya Alta", designation: "Head of Research @CIE", src: "/offline/agri/aditaya alta.png" },
+      { quote: "", name: "Dr. Arief Budiman", designation: "CEO @ PT AGRINDO", src: "/offline/agri/dr arief budiman.png" },
+      { quote: "", name: "Prihadiyanto", designation: "Ex Director @HiBank & MD @Accenture", src: "/offline/agri/prihadiyanto.png" },
+      { quote: "", name: "Julian Sukmana Putra", designation: "Senior Automation Export @Sinarmas APP", src: "/offline/agri/julian sukmana p.png" },
+      { quote: "", name: "Sandy Kusuma", designation: "Waketum 1 Bidang Talenta Digital @APTIKNAS", src: "/offline/agri/sandy kusuma.png" },
+      { quote: "", name: "Sari Lauda", designation: "COO/ Advisor @ Hangry/ Padel Pro", src: "/offline/agri/sari lauda.png" },
+      { quote: "", name: "Christian Budiman", designation: "President Director @ SUITEN INOVASI SUKSES", src: "/offline/agri/christian budiman.png" },
+      { quote: "", name: "Esti Arianti Kesuma", designation: "CEO @Idea Duta Indonesia", src: "/offline/agri/esti arianti.png" }
+    ],
   },
 ];
 
-export const onlineJudges = [
+export const onlineJudgeTracks: JudgeTrack[] = [
   {
-    quote: "Kutipan untuk online judge bisa diisi di sini.",
-    name: "Bintang Fathur Rahman",
-    designation: "Judge",
-    src: "/online/Bintang Fathur Rahman.png",
+    track: "Health",
+    judges: [
+    { quote: "", name: "Daniel Hadiseputro", designation: "Technical Judge", src: "/online/Daniel hadi.png" },
+  { quote: "", name: "Nunung Nurul Qomariyah", designation: "Technical Judge", src: "/online/nunung nurul.png" },
+  { quote: "", name: "Louis Yanggara", designation: "Technical Judge", src: "/online/louis yanggara.png" },
+  { quote: "", name: "Eda Andhika", designation: "Technical and Non-Technical Judge", src: "/online/eda andhika.png" },
+  { quote: "", name: "Bryan Aptana", designation: "Non-Technical Judge", src: "/online/bryan aptana.png" },
+  { quote: "", name: "Muhammad Husein", designation: "Technical and Non-Technical Judge", src: "/online/muh. husein.png" },
+  { quote: "", name: "Julian Chan", designation: "Technical and Non-Technical Judge", src: "/online/julian chan.png" },
+  { quote: "", name: "Bintang Fathur Rohman", designation: "Technical and Non-Technical Judge", src: "/online/bintang fathur rohma.png" },
+  { quote: "", name: "Jaya Iskandar", designation: "Technical and Non-Technical Judge", src: "/online/jaya iskandar.png" },
+  { quote: "", name: "Netan Mangal", designation: "Technical Judge", src: "/online/netan mangal.png" },
+  { quote: "", name: "Julian Sidik", designation: "Technical and Non-Technical Judge", src: "/online/julia sidik.png" },
+  { quote: "", name: "Mathilda Dellanova", designation: "Technical Judge", src: "/online/Mathilda Dellanova.jpeg" },
+  { quote: "", name: "Giga Hidjrika Aura Adkhy", designation: "Technical and Non-Technical Judge", src: "/online/giga hidjrika.png" },
+  { quote: "", name: "Sekarwulan", designation: "Technical and Non-Technical Judge", src: "/online/sekarwulan.png" },
+  { quote: "", name: "Utari Octavianty", designation: "Non-Technical Judge", src: "/online/utari octavianty.png" },
+  { quote: "", name: "Wily Goldramijaya", designation: "Non-Technical Judge", src: "/online/wily goldra.png" }
+],
   },
-  {
-    quote: "Kutipan untuk online judge bisa diisi di sini.",
-    name: "Fariz Eda",
-    designation: "Judge",
-    src: "/online/Fariz Eda.jpeg",
-  },
-  {
-    quote: "Kutipan untuk online judge bisa diisi di sini.",
-    name: "Jaya Iskandar",
-    designation: "Judge",
-    src: "/online/Jaya Iskandar.jpeg",
-  },
-  {
-    quote: "Kutipan untuk online judge bisa diisi di sini.",
-    name: "Julian Chan",
-    designation: "Judge",
-    src: "/online/Julian Chan.jpeg",
-  },
-  {
-    quote: "Kutipan untuk online judge bisa diisi di sini.",
-    name: "Mathilda Dellanova",
-    designation: "Judge",
-    src: "/online/Mathilda Dellanova.jpeg",
-  },
-  {
-    quote: "Kutipan untuk online judge bisa diisi di sini.",
-    name: "Wily Goldramijaya",
-    designation: "Judge",
-    src: "/online/Wily Goldramijaya.jpeg",
-  },
+  { track: "Safety", judges: [] },
+  { track: "Agriculture & Food Systems", judges: [] },
 ];
+
+export const offlineJudges = offlineJudgeTracks[0].judges;
+export const onlineJudges = onlineJudgeTracks[0].judges;
 
 export const categorys = [
   {

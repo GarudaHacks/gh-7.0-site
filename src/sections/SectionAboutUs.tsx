@@ -45,7 +45,7 @@ export default function SectionAboutUs() {
                   duration={0.3}
                   delay={0.2}
                 />
-                + total participants.
+                + total participants. 
               </span>
             </h2>
           </div>

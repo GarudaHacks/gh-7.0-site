@@ -194,7 +194,7 @@ export default function SectionSpeakers() {
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {speakers.map((s) => (
-              <SpeakerCard key={s.id} speaker={s} onOpen={setSelected} />
+              s ? <SpeakerCard key={s.id} speaker={s} onOpen={setSelected} /> : null
             ))}
           </div>
         </div>

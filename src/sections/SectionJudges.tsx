@@ -2,7 +2,7 @@
 
 import CornerCube from "@/components/Cornercube";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
-import { onlineJudges, offlineJudges } from "../data/data";
+import { onlineJudgeTracks, offlineJudgeTracks } from "../data/data";
 
 export default function SectionJudges() {
   const points = [
@@ -37,7 +37,6 @@ export default function SectionJudges() {
 
         {/* Main Content */}
         <div className="py-12 md:py-[40px] flex flex-col gap-12 w-full border-r border-l border-[#C4A9FF] overflow-hidden">
-          {/* OFFLINE JUDGES */}
           <div className="flex flex-col w-full">
             <div className="flex items-center justify-center w-full">
               <h2 className="font-bold text-[#221139] text-3xl md:text-[48px] leading-normal text-center tracking-tight">
@@ -45,22 +44,41 @@ export default function SectionJudges() {
               </h2>
             </div>
 
-            <div className="w-full">
-              <AnimatedTestimonials testimonials={offlineJudges} />
-            </div>
+            {offlineJudgeTracks.map((track, index) => (
+              <div
+                key={track.track}
+                className={`w-full`}
+              >
+                <h3 className="pt-8 text-center text-2xl font-bold text-[#221139] md:text-3xl">
+                  {track.track}
+                </h3>
+                {track.judges.length > 0 && (
+                  <AnimatedTestimonials testimonials={track.judges} />
+                )}
+              </div>
+            ))}
           </div>
 
-          {/* ONLINE JUDGES */}
           <div className="flex flex-col w-full">
-            <div className="flex items-center justify-center w-full border border-[#C4A9FF]">
+            <div className="flex items-center justify-center w-full">
               <h2 className="font-bold text-[#221139] text-3xl md:text-[48px] leading-normal text-center tracking-tight">
                 Meet The Online Judges
               </h2>
             </div>
 
-            <div className="w-full">
-              <AnimatedTestimonials testimonials={onlineJudges} />
-            </div>
+            {onlineJudgeTracks.map((track, index) => (
+              <div
+                key={track.track}
+                className={`w-full`}
+              >
+                {/* <h3 className="pt-8 text-center text-2xl font-bold text-[#221139] md:text-3xl">
+                  {track.track}
+                </h3> */}
+                {track.judges.length > 0 && (
+                  <AnimatedTestimonials testimonials={track.judges} />
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </div>
