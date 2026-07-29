@@ -153,6 +153,13 @@ export const speaker = [
     photo: "/speakers/titan.png",
     bio: "",
   },
+   {
+    id: 3,
+    name: "Nathanael Abednego",
+    role: "Head of Corporate Strategy and CEO Office LG Sinar Mas (LGSM)",
+    photo: "/speakers/nat.png",
+    bio: "Nathanael Abednego is Head of Corporate Strategy & CEO Office at LG Sinar Mas, where he works directly with the CEO and COO to strengthen the company’s strategic foundation, accelerate business growth, and align execution across teams. He brings a strong consulting foundation from BCG and Deloitte Consulting, where he advised clients across the  industries in Indonesia, Japan, South Korea, and Singapore. Prior to LG Sinar Mas, Nathanael led strategy for Bukalapak’s Gaming business, driving international expansion through LapakGaming, Joytify, and Itemku. He also played a key role in establishing multiple incubation programs across Bukalapak from their early stages. Outside of work, Nathanael co-founded multiple businesses across digital marketing, ed-tech, and F&B, which further shaped his entrepreneurial mindset and hands-on business-building capabilities.",
+  },
 ];
 
 export const projects = [
