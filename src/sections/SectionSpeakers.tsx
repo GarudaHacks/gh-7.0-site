@@ -44,7 +44,7 @@ function SpeakerCard({
               }}
             />
 
-            <div className="relative z-10 w-12 h-12 bg-[#AD87FF] rounded-full flex items-center justify-center shrink-0">
+            <div className="relative z-10 w-12 h-12 bg-[#AD87FF] rounded-full flex items-center justify-center shrink-0 group-hover:opacity-0 transition-opacity duration-200">
               <ArrowRightIcon
                 className="h-5 w-5 stroke-[#F9F5FF]"
                 strokeWidth={1.5}
